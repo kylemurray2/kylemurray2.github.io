@@ -5,8 +5,8 @@ var wms_layers = [];
             'title': 'ESRI Satellite',
             'type': 'base',
             'opacity': 1.000000,
-            
-            
+
+
             source: new ol.source.XYZ({
     attributions: ' ',
                 url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
@@ -15,8 +15,8 @@ var wms_layers = [];
 var lyr_LOSmmyr_1 = new ol.layer.Image({
                             opacity: 1,
                             title: "LOS (mm/yr)",
-                            
-                            
+
+
                             source: new ol.source.ImageStatic({
                                url: "./layers/LOSmmyr_1.png",
     attributions: ' ',
