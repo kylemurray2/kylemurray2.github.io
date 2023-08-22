@@ -177,8 +177,8 @@ var onPointerMove = function(evt) {
                             }
                             popupText += '<tr>' + popupField + '</tr>';
                         }
-                    } 
-                    popupText += '</table></li>';    
+                    }
+                    popupText += '</table></li>';
                 }
             }
         } else {
@@ -263,7 +263,7 @@ var onPointerMove = function(evt) {
         if (popupText) {
             overlayPopup.setPosition(coord);
             content.innerHTML = popupText;
-            container.style.display = 'block';        
+            container.style.display = 'block';
         } else {
             container.style.display = 'none';
             closer.blur();
@@ -320,8 +320,8 @@ var onSingleClick = function(evt) {
                                 }
                                 popupText += '<tr>' + popupField + '</tr>';
                             }
-                        } 
-                        popupText += '</table></li>';    
+                        }
+                        popupText += '</table></li>';
                     }
                 }
             } else {
@@ -357,7 +357,7 @@ var onSingleClick = function(evt) {
     } else {
         popupText += '</ul>';
     }
-    
+
     var viewProjection = map.getView().getProjection();
     var viewResolution = map.getView().getResolution();
     for (i = 0; i < wms_layers.length; i++) {
@@ -376,7 +376,7 @@ var onSingleClick = function(evt) {
     if (popupText) {
         overlayPopup.setPosition(coord);
         content.innerHTML = popupText;
-        container.style.display = 'block';        
+        container.style.display = 'block';
     } else {
         container.style.display = 'none';
         closer.blur();
@@ -403,7 +403,7 @@ var onSingleClick = function(evt) {
             helpTooltip.setPosition(evt.coordinate);
         }
     });
-    
+
 
 map.on('pointermove', function(evt) {
     onPointerMove(evt);
@@ -623,8 +623,6 @@ map.on("rendercomplete", function(evt) {
         var attribution = document.getElementsByClassName('ol-attribution')[0];
         var attributionList = attribution.getElementsByTagName('ul')[0];
         var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
-        var qgis2webAttribution = document.createElement('li');
-        qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
         var olAttribution = document.createElement('li');
         olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
         var qgisAttribution = document.createElement('li');
