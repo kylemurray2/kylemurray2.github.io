@@ -40,14 +40,20 @@ function updateCard() {
         japaneseElement.textContent = currentWord.english;
         englishElement.textContent = `${currentWord.kanji}\n(${currentWord.hiragana})`;
     }
-    flashcard.classList.remove('flipped');
 }
 
-function nextCard() {
+async function nextCard() {
     if (vocabulary.length > 0) {
+        flashcard.classList.add('flipped');
+        await delay(600); // Wait for the flip animation to complete (adjust the delay if needed)
         currentIndex = (currentIndex + 1) % vocabulary.length;
         updateCard();
+        flashcard.classList.remove('flipped');
     }
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function updateStats() {
