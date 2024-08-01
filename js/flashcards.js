@@ -16,7 +16,7 @@ const knownCountElement = document.getElementById('knownCount');
 const unknownCountElement = document.getElementById('unknownCount');
 
 // Load vocabulary from JSON file
-fetch('vocabulary.json')
+fetch('v.json')
   .then(response => response.json())
   .then(data => {
     vocabulary = data;
