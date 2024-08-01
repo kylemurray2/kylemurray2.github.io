@@ -1,12 +1,1809 @@
 [
-    {
+  {
       "kanji": "紹介する",
       "hiragana": "しょうかい する",
       "english": "introduce"
-    },
-    {
+  },
+  {
       "kanji": "選手",
       "hiragana": "せんしゅ",
       "english": "player"
-    }
-  ]
+  },
+  {
+      "kanji": "…による",
+      "hiragana": "に よる",
+      "english": "by..."
+  },
+  {
+      "kanji": "行われる",
+      "hiragana": "おこなわれる",
+      "english": "To be carried out/done"
+  },
+  {
+      "kanji": "球場",
+      "hiragana": "きゅうじょう",
+      "english": "Stadium"
+  },
+  {
+      "kanji": "試合",
+      "hiragana": "しあい",
+      "english": "game"
+  },
+  {
+      "kanji": "呼ばれる",
+      "hiragana": "よばれる",
+      "english": "...called (known as)"
+  },
+  {
+      "kanji": "観客",
+      "hiragana": "かんきゃく",
+      "english": "Visitors"
+  },
+  {
+      "kanji": "販売する",
+      "hiragana": "はんばい する",
+      "english": "Sell"
+  },
+  {
+      "kanji": "担当",
+      "hiragana": "たんとう",
+      "english": "Be in charge"
+  },
+  {
+      "kanji": "なぜなら",
+      "hiragana": "なぜなら",
+      "english": "Because... (more polite than だから)"
+  },
+  {
+      "kanji": "部活動",
+      "hiragana": "ぶ かつどう",
+      "english": "extracurricular activities/club"
+  },
+  {
+      "kanji": "サッカー部",
+      "hiragana": "さっかー ぶ",
+      "english": "Soccer club"
+  },
+  {
+      "kanji": "数",
+      "hiragana": "すう",
+      "english": "Number"
+  },
+  {
+      "kanji": "員",
+      "hiragana": "いん",
+      "english": "member"
+  },
+  {
+      "kanji": "部員数",
+      "hiragana": "ぶいんすう",
+      "english": "Number of members"
+  },
+  {
+      "kanji": "（学生）同士の",
+      "hiragana": "（がくせい）どうしの",
+      "english": "Between (students)"
+  },
+  {
+      "kanji": "大会",
+      "hiragana": "たいかい",
+      "english": "tournament"
+  },
+  {
+      "kanji": "出場",
+      "hiragana": "しゅつじょう",
+      "english": "participate"
+  },
+  {
+      "kanji": "特",
+      "hiragana": "とく",
+      "english": "Special"
+  },
+  {
+      "kanji": "特に",
+      "hiragana": "とくに",
+      "english": "In particular/especially"
+  },
+  {
+      "kanji": "人気",
+      "hiragana": "にんき",
+      "english": "popular"
+  },
+  {
+      "kanji": "見学する",
+      "hiragana": "けんがく する",
+      "english": "Visit/attend/watch"
+  },
+  {
+      "kanji": "投げる",
+      "hiragana": "なげる",
+      "english": "Throw"
+  },
+  {
+      "kanji": "構成する",
+      "hiragana": "こうせい する",
+      "english": "Comprise/constitute/configure"
+  },
+  {
+      "kanji": "投手",
+      "hiragana": "とうしゅ",
+      "english": "pitcher (baseball)"
+  },
+  {
+      "kanji": "捕手",
+      "hiragana": "ほしゅ",
+      "english": "Catcher"
+  },
+  {
+      "kanji": "受ける",
+      "hiragana": "うける",
+      "english": "Receive/catch"
+  },
+  {
+      "kanji": "重要",
+      "hiragana": "じゅうよう",
+      "english": "Important/significant/essential"
+  },
+  {
+      "kanji": "（彼）のとって",
+      "hiragana": "（かれ）のとって",
+      "english": "for (him)"
+  },
+  {
+      "kanji": "サッカー",
+      "hiragana": "さっかー",
+      "english": "SOCCER"
+  },
+  {
+      "kanji": "と並んで",
+      "hiragana": "とならんで",
+      "english": ",along with"
+  },
+  {
+      "kanji": "野球と同じく、",
+      "hiragana": "やきゅうとおなじく、",
+      "english": "like baseball,"
+  },
+  {
+      "kanji": "目指する",
+      "hiragana": "めざ する",
+      "english": "Aim"
+  },
+  {
+      "kanji": "…を目指しています",
+      "hiragana": "…をめざしています",
+      "english": "Want to become..."
+  },
+  {
+      "kanji": "競争",
+      "hiragana": "きょうそう",
+      "english": "Competition"
+  },
+  {
+      "kanji": "率",
+      "hiragana": "りつ",
+      "english": "Rate (competition rate)"
+  },
+  {
+      "kanji": "非常（に高く）",
+      "hiragana": "ひじょう（にたかく）",
+      "english": "Extremely (high)"
+  },
+  {
+      "kanji": "収入",
+      "hiragana": "しゅうにゅう",
+      "english": "income"
+  },
+  {
+      "kanji": "得ること",
+      "hiragana": "える こと",
+      "english": "earnings"
+  },
+  {
+      "kanji": "攻撃",
+      "hiragana": "こうげき",
+      "english": "Offense/attack"
+  },
+  {
+      "kanji": "中盤",
+      "hiragana": "ちゅうばん",
+      "english": "Middle"
+  },
+  {
+      "kanji": "守備",
+      "hiragana": "しゅび",
+      "english": "defense"
+  },
+  {
+      "kanji": "分ける",
+      "hiragana": "わける",
+      "english": "Divide"
+  },
+  {
+      "kanji": "相手チーム",
+      "hiragana": "あいて ちーむ",
+      "english": "Opposing team"
+  },
+  {
+      "kanji": "得",
+      "hiragana": "とく",
+      "english": "Get/gain/profit"
+  },
+  {
+      "kanji": "得点",
+      "hiragana": "とくてん",
+      "english": "goal/score/point"
+  },
+  {
+      "kanji": "同点",
+      "hiragana": "どうてん",
+      "english": "Tie"
+  },
+  {
+      "kanji": "引き分け",
+      "hiragana": "ひきわけ",
+      "english": "Draw"
+  },
+  {
+      "kanji": "そのうち",
+      "hiragana": "そのうち",
+      "english": "Among them"
+  },
+  {
+      "kanji": "前半",
+      "hiragana": "ぜんはん",
+      "english": "First half"
+  },
+  {
+      "kanji": "後半",
+      "hiragana": "こうはん",
+      "english": "Second half"
+  },
+  {
+      "kanji": "休憩時間",
+      "hiragana": "きゅうけいじかん",
+      "english": "Break time"
+  },
+  {
+      "kanji": "向けて",
+      "hiragana": "むけて",
+      "english": "toward"
+  },
+  {
+      "kanji": "作戦",
+      "hiragana": "さくせん",
+      "english": "Strategy"
+  },
+  {
+      "kanji": "最終的に",
+      "hiragana": "さいしゅうてきに",
+      "english": "In the end"
+  },
+  {
+      "kanji": "勝利",
+      "hiragana": "しょうり",
+      "english": "Victory/win"
+  },
+  {
+      "kanji": "（場合）によって",
+      "hiragana": "（ばあい）によって",
+      "english": "In some (cases)"
+  },
+  {
+      "kanji": "行われる",
+      "hiragana": "おこなわれる",
+      "english": "To be carried out"
+  },
+  {
+      "kanji": "体力",
+      "hiragana": "たいりょく",
+      "english": "Physical strength"
+  },
+  {
+      "kanji": "もてやすい",
+      "hiragana": "もてやすい",
+      "english": "tend to be popular"
+  },
+  {
+      "kanji": "近年",
+      "hiragana": "きんねん",
+      "english": "recent years"
+  },
+  {
+      "kanji": "テニス",
+      "hiragana": "てにす",
+      "english": "TENNIS"
+  },
+  {
+      "kanji": "打つ",
+      "hiragana": "うつ",
+      "english": "Hit (ball)"
+  },
+  {
+      "kanji": "年齢",
+      "hiragana": "ねんれい",
+      "english": "Age"
+  },
+  {
+      "kanji": "性別",
+      "hiragana": "せいべつ",
+      "english": "Gender"
+  },
+  {
+      "kanji": "関係",
+      "hiragana": "かんけい",
+      "english": "Relationship"
+  },
+  {
+      "kanji": "関係なく",
+      "hiragana": "かんけいなく",
+      "english": "Regardless"
+  },
+  {
+      "kanji": "種類",
+      "hiragana": "しゅるい",
+      "english": "Kinds/types/varieties"
+  },
+  {
+      "kanji": "相手",
+      "hiragana": "あいて",
+      "english": "Partner/opponent/companion"
+  },
+  {
+      "kanji": "戦い",
+      "hiragana": "たたかい",
+      "english": "fight/battle/struggle"
+  },
+  {
+      "kanji": "一方",
+      "hiragana": "いっぽう",
+      "english": "On the other hand (one side)"
+  },
+  {
+      "kanji": "連携",
+      "hiragana": "れんけい",
+      "english": "Cooperation/alignment"
+  },
+  {
+      "kanji": "協力",
+      "hiragana": "きょうりょく",
+      "english": "Cooperation"
+  },
+  {
+      "kanji": "大体",
+      "hiragana": "だいたい",
+      "english": "Roughly/generally"
+  },
+  {
+      "kanji": "一般",
+      "hiragana": "いっぱん",
+      "english": "General/common"
+  },
+  {
+      "kanji": "主に",
+      "hiragana": "おもに",
+      "english": "Mainly"
+  },
+  {
+      "kanji": "幾つか",
+      "hiragana": "いくつか",
+      "english": "Some/several"
+  },
+  {
+      "kanji": "理由",
+      "hiragana": "りゆう",
+      "english": "Reason"
+  },
+  {
+      "kanji": "費用面",
+      "hiragana": "ひようめん",
+      "english": "Cost"
+  },
+  {
+      "kanji": "負担",
+      "hiragana": "ふたん",
+      "english": "Load/burden"
+  },
+  {
+      "kanji": "かかります",
+      "hiragana": "かかります",
+      "english": "Takes"
+  },
+  {
+      "kanji": "激しい",
+      "hiragana": "はげしい",
+      "english": "Intense"
+  },
+  {
+      "kanji": "健康",
+      "hiragana": "けんこう",
+      "english": "Health"
+  },
+  {
+      "kanji": "作り",
+      "hiragana": "つくり",
+      "english": "Zukuri"
+  },
+  {
+      "kanji": "効果",
+      "hiragana": "こうか",
+      "english": "Effect/effectiveness"
+  },
+  {
+      "kanji": "相撲",
+      "hiragana": "すもう",
+      "english": "SUMOU"
+  },
+  {
+      "kanji": "国技",
+      "hiragana": "こくぎ",
+      "english": "National sport"
+  },
+  {
+      "kanji": "つまり",
+      "hiragana": "つまり",
+      "english": "In other words"
+  },
+  {
+      "kanji": "代表する",
+      "hiragana": "だいひょう する",
+      "english": "Represent"
+  },
+  {
+      "kanji": "伝統文化",
+      "hiragana": "でんとう ぶんか",
+      "english": "Traditional culture"
+  },
+  {
+      "kanji": "かつては",
+      "hiragana": "かつては",
+      "english": "Once upon a time/A long time ago.."
+  },
+  {
+      "kanji": "祈る",
+      "hiragana": "いのる",
+      "english": "To pray"
+  },
+  {
+      "kanji": "現在",
+      "hiragana": "げんざい",
+      "english": "Now/in current times"
+  },
+  {
+      "kanji": "雰囲気",
+      "hiragana": "ふんいき",
+      "english": "Atmosphere/vibe"
+  },
+  {
+      "kanji": "行う",
+      "hiragana": "おこなう",
+      "english": "Conduct/perform/do"
+  },
+  {
+      "kanji": "力士",
+      "hiragana": "りきし",
+      "english": "Sumo wrestler"
+  },
+  {
+      "kanji": "体重",
+      "hiragana": "たいじゅう",
+      "english": "Body weight"
+  },
+  {
+      "kanji": "維持する",
+      "hiragana": "いじ する",
+      "english": "Maintain/sustain"
+  },
+  {
+      "kanji": "円形",
+      "hiragana": "えんけい",
+      "english": "Round/circle"
+  },
+  {
+      "kanji": "逆に",
+      "hiragana": "ぎゃくに",
+      "english": "Reverse/vice versa/conversely"
+  },
+  {
+      "kanji": "技",
+      "hiragana": "わざ",
+      "english": "Technique"
+  },
+  {
+      "kanji": "存在（する）",
+      "hiragana": "そんざい（する）",
+      "english": "Existence (to exist)"
+  },
+  {
+      "kanji": "駆使する",
+      "hiragana": "くし する",
+      "english": "Make full use of"
+  },
+  {
+      "kanji": "最も",
+      "hiragana": "もっとも",
+      "english": "Most"
+  },
+  {
+      "kanji": "目標",
+      "hiragana": "もくひょう",
+      "english": "Goal"
+  },
+  {
+      "kanji": "…といえば",
+      "hiragana": "…といえば",
+      "english": "Speaking of..."
+  },
+  {
+      "kanji": "共同生活",
+      "hiragana": "きょうどう せいかつ",
+      "english": "Living together"
+  },
+  {
+      "kanji": "早朝",
+      "hiragana": "そうちょう",
+      "english": "Early morning"
+  },
+  {
+      "kanji": "稽古",
+      "hiragana": "けいこ",
+      "english": "Training"
+  },
+  {
+      "kanji": "励み",
+      "hiragana": "はげみ",
+      "english": "Encouragement"
+  },
+  {
+      "kanji": "稽古励み",
+      "hiragana": "けいこ はげみ",
+      "english": "Train hard"
+  },
+  {
+      "kanji": "上下関係",
+      "hiragana": "じょうげ かんけい",
+      "english": "Hierarchical relationship"
+  },
+  {
+      "kanji": "具材",
+      "hiragana": "ぐざい",
+      "english": "Ingredients"
+  },
+  {
+      "kanji": "たっぷり",
+      "hiragana": "たっぷり",
+      "english": "Plenty"
+  },
+  {
+      "kanji": "…など",
+      "hiragana": "…など",
+      "english": "Etc/and so on.."
+  },
+  {
+      "kanji": "活躍",
+      "hiragana": "かつやく",
+      "english": "Active"
+  },
+  {
+      "kanji": "近年",
+      "hiragana": "きんねん",
+      "english": "recent years"
+  },
+  {
+      "kanji": "かなり",
+      "hiragana": "かなり",
+      "english": "pretty/rather/quite"
+  },
+  {
+      "kanji": "一対一",
+      "hiragana": "いちたいいち",
+      "english": "One-on-one"
+  },
+  {
+      "kanji": "柔道",
+      "hiragana": "じゅうどう",
+      "english": "JUDO"
+  },
+  {
+      "kanji": "殴る",
+      "hiragana": "なぐる",
+      "english": "Punch"
+  },
+  {
+      "kanji": "倒する",
+      "hiragana": "たお する",
+      "english": "Defeat"
+  },
+  {
+      "kanji": "体制",
+      "hiragana": "たいせい",
+      "english": "Posture/balance"
+  },
+  {
+      "kanji": "崩する",
+      "hiragana": "くず する",
+      "english": "Break down"
+  },
+  {
+      "kanji": "動き",
+      "hiragana": "うごき",
+      "english": "Movement/move"
+  },
+  {
+      "kanji": "動く",
+      "hiragana": "うごく",
+      "english": "Move"
+  },
+  {
+      "kanji": "固め",
+      "hiragana": "かため",
+      "english": "Holding/hardening/defense"
+  },
+  {
+      "kanji": "抑える",
+      "hiragana": "おさえる",
+      "english": "Hold"
+  },
+  {
+      "kanji": "無く",
+      "hiragana": "なく",
+      "english": "without"
+  },
+  {
+      "kanji": "無し",
+      "hiragana": "なし",
+      "english": "without"
+  },
+  {
+      "kanji": "取得する",
+      "hiragana": "しゅとく する",
+      "english": "Acquire"
+  },
+  {
+      "kanji": "努力",
+      "hiragana": "どりょく",
+      "english": "effort"
+  },
+  {
+      "kanji": "…の中でも",
+      "hiragana": "…のちゅうでも",
+      "english": "Among the..."
+  },
+  {
+      "kanji": "採用する",
+      "hiragana": "さいよう する",
+      "english": "Adopt/use"
+  },
+  {
+      "kanji": "学びます",
+      "hiragana": "まなびます",
+      "english": "Learn"
+  },
+  {
+      "kanji": "体育",
+      "hiragana": "たいいく",
+      "english": "Physical ed."
+  },
+  {
+      "kanji": "精神面",
+      "hiragana": "せいしんめん",
+      "english": "Mentally"
+  },
+  {
+      "kanji": "成長する",
+      "hiragana": "せいちょう する",
+      "english": "Grow up"
+  },
+  {
+      "kanji": "尊重",
+      "hiragana": "そんちょう",
+      "english": "Respect"
+  },
+  {
+      "kanji": "敬う",
+      "hiragana": "うやまう",
+      "english": "Respect"
+  },
+  {
+      "kanji": "礼",
+      "hiragana": "れい",
+      "english": "Thank you"
+  },
+  {
+      "kanji": "礼儀",
+      "hiragana": "れいぎ",
+      "english": "Manners/courtesy"
+  },
+  {
+      "kanji": "心",
+      "hiragana": "こころ",
+      "english": "Heart/core/spirit"
+  },
+  {
+      "kanji": "表す",
+      "hiragana": "あらわす",
+      "english": "Represent/express/show"
+  },
+  {
+      "kanji": "通じて",
+      "hiragana": "つうじて",
+      "english": "Through/via"
+  },
+  {
+      "kanji": "護身術",
+      "hiragana": "ごしんじゅつ",
+      "english": "Self-defense"
+  },
+  {
+      "kanji": "訓練",
+      "hiragana": "くんれん",
+      "english": "Training/drill/practice"
+  },
+  {
+      "kanji": "緊急時",
+      "hiragana": "いざという",
+      "english": "emergency"
+  },
+  {
+      "kanji": "身",
+      "hiragana": "み",
+      "english": "Body"
+  },
+  {
+      "kanji": "守る",
+      "hiragana": "まもる",
+      "english": "Protect/defend"
+  },
+  {
+      "kanji": "として",
+      "hiragana": "として",
+      "english": "As"
+  },
+  {
+      "kanji": "剣道",
+      "hiragana": "けんどう",
+      "english": "KENDO"
+  },
+  {
+      "kanji": "竹刀",
+      "hiragana": "しない",
+      "english": "bamboo sword"
+  },
+  {
+      "kanji": "戦う",
+      "hiragana": "たたかう",
+      "english": "to fight"
+  },
+  {
+      "kanji": "防具",
+      "hiragana": "ぼうぐ",
+      "english": "Protective gear/armor"
+  },
+  {
+      "kanji": "より",
+      "hiragana": "より",
+      "english": "than"
+  },
+  {
+      "kanji": "先に",
+      "hiragana": "さきに",
+      "english": "First/before/ahead"
+  },
+  {
+      "kanji": "取る",
+      "hiragana": "とる",
+      "english": "Take"
+  },
+  {
+      "kanji": "つける",
+      "hiragana": "つける",
+      "english": "Put on"
+  },
+  {
+      "kanji": "汗",
+      "hiragana": "あせ",
+      "english": "Sweat"
+  },
+  {
+      "kanji": "個人戦",
+      "hiragana": "こじんせん",
+      "english": "Individual/private"
+  },
+  {
+      "kanji": "団体戦",
+      "hiragana": "だんたいせん",
+      "english": "Team competition"
+  },
+  {
+      "kanji": "仲間",
+      "hiragana": "なかま",
+      "english": "Teammates"
+  },
+  {
+      "kanji": "共に",
+      "hiragana": "ともに",
+      "english": "together/Along with"
+  },
+  {
+      "kanji": "複数（人）",
+      "hiragana": "ふくすう（にん）",
+      "english": "multiple (people)"
+  },
+  {
+      "kanji": "繰り返す",
+      "hiragana": "くりかえす",
+      "english": "Repeat"
+  },
+  {
+      "kanji": "喜んで",
+      "hiragana": "よろこんで",
+      "english": "celebrate"
+  },
+  {
+      "kanji": "敬う",
+      "hiragana": "うやまう",
+      "english": "respect"
+  },
+  {
+      "kanji": "以外",
+      "hiragana": "いがい",
+      "english": "Other than"
+  },
+  {
+      "kanji": "作法",
+      "hiragana": "さほう",
+      "english": "Etiquette"
+  },
+  {
+      "kanji": "単なるスポーツ",
+      "hiragana": "たんなる すぽーつ",
+      "english": "a mere sport"
+  },
+  {
+      "kanji": "弓で矢",
+      "hiragana": "ゆみで や",
+      "english": "bow and arrow"
+  },
+  {
+      "kanji": "射る",
+      "hiragana": "いる",
+      "english": "Shoot/hit"
+  },
+  {
+      "kanji": "起源",
+      "hiragana": "きげん",
+      "english": "origin/source"
+  },
+  {
+      "kanji": "武士",
+      "hiragana": "ぶし",
+      "english": "samurai/warrior"
+  },
+  {
+      "kanji": "時代",
+      "hiragana": "じだい",
+      "english": "era"
+  },
+  {
+      "kanji": "当時",
+      "hiragana": "とうじ",
+      "english": "At that time/in those days"
+  },
+  {
+      "kanji": "竹",
+      "hiragana": "たけ",
+      "english": "bamboo"
+  },
+  {
+      "kanji": "材料",
+      "hiragana": "ざいりょう",
+      "english": "ingredient/material"
+  },
+  {
+      "kanji": "以上",
+      "hiragana": "いじょう",
+      "english": "over/more than/that’s all"
+  },
+  {
+      "kanji": "程度",
+      "hiragana": "ていど",
+      "english": "on the order of/degree"
+  },
+  {
+      "kanji": "先端",
+      "hiragana": "せんたん",
+      "english": "tip"
+  },
+  {
+      "kanji": "尖る",
+      "hiragana": "とがる",
+      "english": "sharp"
+  },
+  {
+      "kanji": "当たる",
+      "hiragana": "あたる",
+      "english": "hit"
+  },
+  {
+      "kanji": "服装",
+      "hiragana": "ふくそう",
+      "english": "Clothing"
+  },
+  {
+      "kanji": "特徴的",
+      "hiragana": "とくちょうてき",
+      "english": "Distinctive"
+  },
+  {
+      "kanji": "衣装",
+      "hiragana": "いしょう",
+      "english": "Costume/clothing"
+  },
+  {
+      "kanji": "機会",
+      "hiragana": "きかい",
+      "english": "opportunity/occasion"
+  },
+  {
+      "kanji": "的",
+      "hiragana": "まと",
+      "english": "Target"
+  },
+  {
+      "kanji": "数",
+      "hiragana": "かず",
+      "english": "number"
+  },
+  {
+      "kanji": "競います",
+      "hiragana": "きそいます",
+      "english": "Compete"
+  },
+  {
+      "kanji": "組",
+      "hiragana": "くみ",
+      "english": "set/group/team"
+  },
+  {
+      "kanji": "観客",
+      "hiragana": "かんきゃく",
+      "english": "Spectator/guest/visitor/customer"
+  },
+  {
+      "kanji": "韓国",
+      "hiragana": "かんこく",
+      "english": "korean"
+  },
+  {
+      "kanji": "環境",
+      "hiragana": "かんきょう",
+      "english": "environment"
+  },
+  {
+      "kanji": "真っ直ぐ",
+      "hiragana": "まっすぐ",
+      "english": "Straight"
+  },
+  {
+      "kanji": "注目",
+      "hiragana": "ちゅうもく",
+      "english": "Attention/focus"
+  },
+  {
+      "kanji": "マラソン",
+      "hiragana": "まらそん",
+      "english": "MARATHON"
+  },
+  {
+      "kanji": "距離",
+      "hiragana": "きょり",
+      "english": "Distance/range"
+  },
+  {
+      "kanji": "様々",
+      "hiragana": "さまざま",
+      "english": "Various"
+  },
+  {
+      "kanji": "開催する",
+      "hiragana": "かいさい する",
+      "english": "Put on an event"
+  },
+  {
+      "kanji": "地域",
+      "hiragana": "ちいき",
+      "english": "Area"
+  },
+  {
+      "kanji": "応援する",
+      "hiragana": "おうえん する",
+      "english": "Cheer on/support"
+  },
+  {
+      "kanji": "魅力",
+      "hiragana": "みりょく",
+      "english": "Attraction"
+  },
+  {
+      "kanji": "気軽に",
+      "hiragana": "きがるに",
+      "english": "casually"
+  },
+  {
+      "kanji": "技術",
+      "hiragana": "ぎじゅつ",
+      "english": "Technique/technology"
+  },
+  {
+      "kanji": "…さえあれば",
+      "hiragana": "…さえあれば",
+      "english": "as long as.. if only.. if all there is.."
+  },
+  {
+      "kanji": "体力",
+      "hiragana": "たいりょく",
+      "english": "Stamina/strength"
+  },
+  {
+      "kanji": "走り切る",
+      "hiragana": "はしりきる",
+      "english": "Run to the end"
+  },
+  {
+      "kanji": "使い切る",
+      "hiragana": "つかいきる",
+      "english": "Use up completely"
+  },
+  {
+      "kanji": "読み切る",
+      "hiragana": "よみきる",
+      "english": "Finish reading"
+  },
+  {
+      "kanji": "食べ切った",
+      "hiragana": "たべきった",
+      "english": "I ate it all up"
+  },
+  {
+      "kanji": "にわたって",
+      "hiragana": "にわたって",
+      "english": "Across/over/spanning"
+  },
+  {
+      "kanji": "筋力",
+      "hiragana": "きんりょく",
+      "english": "Muscle strength"
+  },
+  {
+      "kanji": "心肺機能",
+      "hiragana": "しんぱいきのう",
+      "english": "Cardio function"
+  },
+  {
+      "kanji": "酸素",
+      "hiragana": "さんそ",
+      "english": "Oxygen"
+  },
+  {
+      "kanji": "取り込み",
+      "hiragana": "とりこみ",
+      "english": "Take in/import"
+  },
+  {
+      "kanji": "心臓",
+      "hiragana": "しんぞう",
+      "english": "Heart"
+  },
+  {
+      "kanji": "肺",
+      "hiragana": "はい",
+      "english": "Lungs"
+  },
+  {
+      "kanji": "養う",
+      "hiragana": "やしなう",
+      "english": "Nurture/develop"
+  },
+  {
+      "kanji": "日々",
+      "hiragana": "ひび",
+      "english": "Daily"
+  },
+  {
+      "kanji": "欠かす",
+      "hiragana": "かかす",
+      "english": "Miss/fail"
+  },
+  {
+      "kanji": "欠かせません",
+      "hiragana": "かかせません",
+      "english": "Can’t be missed"
+  },
+  {
+      "kanji": "走り込み",
+      "hiragana": "はしりこみ",
+      "english": "(Intensive) running"
+  },
+  {
+      "kanji": "年代",
+      "hiragana": "ねんだい",
+      "english": "Age/year"
+  },
+  {
+      "kanji": "参加する",
+      "hiragana": "さんか する",
+      "english": "Participate"
+  },
+  {
+      "kanji": "超える",
+      "hiragana": "こえる",
+      "english": "Exceed"
+  },
+  {
+      "kanji": "（動詞）方",
+      "hiragana": "（どうし）かた",
+      "english": "The way to (verb)/ how to"
+  },
+  {
+      "kanji": "（名詞）それぞれ",
+      "hiragana": "（めいし）それぞれ",
+      "english": "Each (noun)"
+  },
+  {
+      "kanji": "完走",
+      "hiragana": "かんそう",
+      "english": "Finished (running the race)"
+  },
+  {
+      "kanji": "記録",
+      "hiragana": "きろく",
+      "english": "Record/document"
+  },
+  {
+      "kanji": "更新",
+      "hiragana": "こうしん",
+      "english": "update"
+  },
+  {
+      "kanji": "…ながら",
+      "hiragana": "…ながら",
+      "english": "While..."
+  },
+  {
+      "kanji": "のんびり",
+      "hiragana": "のんびり",
+      "english": "Leisurely"
+  },
+  {
+      "kanji": "のんび",
+      "hiragana": "のんび",
+      "english": "Relaxed"
+  },
+  {
+      "kanji": "自信",
+      "hiragana": "じしん",
+      "english": "Confidence"
+  },
+  {
+      "kanji": "挑戦",
+      "hiragana": "ちょうせん",
+      "english": "Challenge"
+  },
+  {
+      "kanji": "貢献する",
+      "hiragana": "こうけん する",
+      "english": "Contribute"
+  },
+  {
+      "kanji": "活性化",
+      "hiragana": "かっせいか",
+      "english": "Activation/revitalization"
+  },
+
+  {
+      "kanji": "日本の地方",
+      "hiragana": "にほん の ちほう",
+      "english": "Regions of Japan"
+  },
+  {
+      "kanji": "地域",
+      "hiragana": "ちいき",
+      "english": "Area/locality"
+  },
+  {
+      "kanji": "北海道",
+      "hiragana": "ほっかいどう",
+      "english": "Hokkaido"
+  },
+  {
+      "kanji": "面積",
+      "hiragana": "めんせき",
+      "english": "Area (quantity)"
+  },
+  {
+      "kanji": "2割",
+      "hiragana": "にわり",
+      "english": "2 percent"
+  },
+  {
+      "kanji": "占める",
+      "hiragana": "しめる",
+      "english": "To comprise/occupy"
+  },
+  {
+      "kanji": "中心",
+      "hiragana": "ちゅうしん",
+      "english": "Center"
+  },
+  {
+      "kanji": "都市",
+      "hiragana": "とし",
+      "english": "City"
+  },
+  {
+      "kanji": "住む",
+      "hiragana": "すむ",
+      "english": "To live"
+  },
+  {
+      "kanji": "気候",
+      "hiragana": "きこう",
+      "english": "Climate"
+  },
+  {
+      "kanji": "時期",
+      "hiragana": "じき",
+      "english": "Season/time/period"
+  },
+  {
+      "kanji": "季節",
+      "hiragana": "きせつ",
+      "english": "Season"
+  },
+  {
+      "kanji": "祭り",
+      "hiragana": "まつり",
+      "english": "Festival"
+  },
+  {
+      "kanji": "観光",
+      "hiragana": "かんこう",
+      "english": "Sightseeing"
+  },
+  {
+      "kanji": "西洋風",
+      "hiragana": "せいようふう",
+      "english": "Western style"
+  },
+  {
+      "kanji": "昔",
+      "hiragana": "むかし",
+      "english": "Long ago/former"
+  },
+  {
+      "kanji": "残る",
+      "hiragana": "のこる",
+      "english": "To remain/left over"
+  },
+  {
+      "kanji": "（世界）遺産",
+      "hiragana": "（せかい）いさん",
+      "english": "(World) heritage"
+  },
+  {
+      "kanji": "登録する",
+      "hiragana": "とうろく する",
+      "english": "Register"
+  },
+  {
+      "kanji": "自然",
+      "hiragana": "しぜん",
+      "english": "Nature"
+  },
+  {
+      "kanji": "以外",
+      "hiragana": "いがい",
+      "english": "Other than"
+  },
+  {
+      "kanji": "野生",
+      "hiragana": "やせい",
+      "english": "Wild"
+  },
+  {
+      "kanji": "ことでも",
+      "hiragana": "ことでも",
+      "english": "Even"
+  },
+  {
+      "kanji": "特に",
+      "hiragana": "とくに",
+      "english": "In particular"
+  },
+  {
+      "kanji": "海産物",
+      "hiragana": "かいさんぶつ",
+      "english": "Seafood"
+  },
+  {
+      "kanji": "羊",
+      "hiragana": "ひつじ",
+      "english": "Sheep"
+  },
+  {
+      "kanji": "特別",
+      "hiragana": "とくべつ",
+      "english": "Special"
+  },
+  {
+      "kanji": "形",
+      "hiragana": "かたち",
+      "english": "Shape"
+  },
+  {
+      "kanji": "味付け",
+      "hiragana": "あじつけ",
+      "english": "Seasoning"
+  },
+  {
+      "kanji": "載せる",
+      "hiragana": "のせる",
+      "english": "Place on top"
+  },
+  {
+      "kanji": "移動",
+      "hiragana": "いどう",
+      "english": "Move"
+  },
+  {
+      "kanji": "北",
+      "hiragana": "きた",
+      "english": "North"
+  },
+  {
+      "kanji": "東",
+      "hiragana": "あずま",
+      "english": "East"
+  },
+  {
+      "kanji": "南",
+      "hiragana": "みなみ",
+      "english": "South"
+  },
+  {
+      "kanji": "西",
+      "hiragana": "にし",
+      "english": "West"
+  },
+  {
+      "kanji": "豊か",
+      "hiragana": "ゆたか",
+      "english": "Rich"
+  },
+  {
+      "kanji": "位置する",
+      "hiragana": "いちする",
+      "english": "To position/be located"
+  },
+  {
+      "kanji": "生産（量）",
+      "hiragana": "せいさん（りょう）",
+      "english": "Production (volume/amount)"
+  },
+  {
+      "kanji": "海域",
+      "hiragana": "かいいき",
+      "english": "Ocean area"
+  },
+  {
+      "kanji": "天然",
+      "hiragana": "てんねん",
+      "english": "Natural"
+  },
+  {
+      "kanji": "捕まえる",
+      "hiragana": "つかまえる",
+      "english": "To catch"
+  },
+  {
+      "kanji": "ちなみに",
+      "hiragana": "ちなみに",
+      "english": "By the way"
+  },
+  {
+      "kanji": "名物",
+      "hiragana": "めいぶつ",
+      "english": "Specialty (product)"
+  },
+  {
+      "kanji": "器",
+      "hiragana": "うつわ",
+      "english": "Container/vessel/bowl"
+  },
+  {
+      "kanji": "店員",
+      "hiragana": "てんいん",
+      "english": "Staff/employee"
+  },
+  {
+      "kanji": "次々",
+      "hiragana": "つぎつぎ",
+      "english": "One by one"
+  },
+  {
+      "kanji": "提供する",
+      "hiragana": "ていきょう する",
+      "english": "Provide/offer"
+  },
+  {
+      "kanji": "何倍も",
+      "hiragana": "なんばいも",
+      "english": "Many"
+  },
+  {
+      "kanji": "牛タン",
+      "hiragana": "ぎゅうたん",
+      "english": "Beef tongue"
+  },
+  {
+      "kanji": "牛の舌",
+      "hiragana": "うし の した",
+      "english": "Cow’s tongue"
+  },
+  {
+      "kanji": "わざわざ",
+      "hiragana": "わざわざ",
+      "english": "Specially"
+  },
+  {
+      "kanji": "人口",
+      "hiragana": "じんこう",
+      "english": "Population"
+  },
+  {
+      "kanji": "発達する",
+      "hiragana": "はったつ する",
+      "english": "Develop"
+  },
+  {
+      "kanji": "高層（ビル）",
+      "hiragana": "こうそう（びる）",
+      "english": "High-rise (building)"
+  },
+  {
+      "kanji": "首都",
+      "hiragana": "しゅと",
+      "english": "Capital (modern/administrative/political)"
+  },
+  {
+      "kanji": "都",
+      "hiragana": "みやこ",
+      "english": "Capital (ancient/poetic/historical)"
+  },
+  {
+      "kanji": "重要",
+      "hiragana": "じゅうよう",
+      "english": "Important/significant"
+  },
+  {
+      "kanji": "定番",
+      "hiragana": "ていばん",
+      "english": "Classic"
+  },
+  {
+      "kanji": "聖地",
+      "hiragana": "せいち",
+      "english": "Holy land"
+  },
+  {
+      "kanji": "最新",
+      "hiragana": "さいしん",
+      "english": "Latest"
+  },
+  {
+      "kanji": "家電",
+      "hiragana": "かでん",
+      "english": "Home appliances/electronics"
+  },
+  {
+      "kanji": "全国",
+      "hiragana": "ぜんこく",
+      "english": "Nationwide"
+  },
+  {
+      "kanji": "中華街",
+      "hiragana": "ちゅうかがい",
+      "english": "Chinatown"
+  },
+  {
+      "kanji": "独特",
+      "hiragana": "どくとく",
+      "english": "Unique"
+  },
+  {
+      "kanji": "ながら",
+      "hiragana": "ながら",
+      "english": "While..."
+  },
+  {
+      "kanji": "代表する",
+      "hiragana": "だいひょう する",
+      "english": "To represent"
+  },
+  {
+      "kanji": "交通網",
+      "hiragana": "こうつうもう",
+      "english": "Transportation"
+  },
+  {
+      "kanji": "国際線",
+      "hiragana": "こくさいせん",
+      "english": "International flights"
+  },
+  {
+      "kanji": "国内線",
+      "hiragana": "こくないせん",
+      "english": "Domestic flights"
+  },
+  {
+      "kanji": "政治",
+      "hiragana": "せいじ",
+      "english": "Politics"
+  },
+  {
+      "kanji": "活気",
+      "hiragana": "かっき",
+      "english": "Vibrancy/liveliness"
+  },
+  {
+      "kanji": "真ん中に",
+      "hiragana": "まんなか に",
+      "english": "Right in the middle of"
+  },
+  {
+      "kanji": "県",
+      "hiragana": "けん",
+      "english": "Prefecture"
+  },
+  {
+      "kanji": "構成する",
+      "hiragana": "こうせい する",
+      "english": "Consist of"
+  },
+  {
+      "kanji": "お米",
+      "hiragana": "おこめ",
+      "english": "Rice"
+  },
+  {
+      "kanji": "評判",
+      "hiragana": "ひょうばん",
+      "english": "Reputation/popularity"
+  },
+  {
+      "kanji": "日本酒",
+      "hiragana": "にほんしゅ",
+      "english": "Japanese sake"
+  },
+  {
+      "kanji": "産地",
+      "hiragana": "さんち",
+      "english": "Origin"
+  },
+  {
+      "kanji": "しか",
+      "hiragana": "しか",
+      "english": "Except/only"
+  },
+  {
+      "kanji": "具体的に",
+      "hiragana": "ぐたい てきに",
+      "english": "Specifically"
+  },
+  {
+      "kanji": "ぶどう",
+      "hiragana": "ぶどう",
+      "english": "Grape"
+  },
+  {
+      "kanji": "両方",
+      "hiragana": "りょうほう",
+      "english": "Both"
+  },
+  {
+      "kanji": "またがって",
+      "hiragana": "またがって",
+      "english": "Straddle"
+  },
+  {
+      "kanji": "土地",
+      "hiragana": "とち",
+      "english": "Local"
+  },
+  {
+      "kanji": "十分",
+      "hiragana": "じゅうぶん",
+      "english": "Enough/sufficient"
+  },
+  {
+      "kanji": "発展",
+      "hiragana": "はってん",
+      "english": "Development/growth"
+  },
+  {
+      "kanji": "折り",
+      "hiragana": "おり",
+      "english": "Formal written version of いって (connecting sentences)"
+  },
+  {
+      "kanji": "あり",
+      "hiragana": "あり",
+      "english": "Can be"
+  },
+  {
+      "kanji": "かつて",
+      "hiragana": "かつて",
+      "english": "Once upon a time/long ago"
+  },
+  {
+      "kanji": "湖",
+      "hiragana": "みずうみ",
+      "english": "Lake"
+  },
+  {
+      "kanji": "囲まれた",
+      "hiragana": "かこまれた",
+      "english": "Surrounded"
+  },
+  {
+      "kanji": "水上（スポーツ）",
+      "hiragana": "すいじょう（すぽーつ）",
+      "english": "Water (sports)"
+  },
+  {
+      "kanji": "貴重",
+      "hiragana": "きちょう",
+      "english": "Precious"
+  },
+  {
+      "kanji": "大仏",
+      "hiragana": "だいぶつ",
+      "english": "Great Buddha"
+  },
+  {
+      "kanji": "温暖",
+      "hiragana": "おんだん",
+      "english": "Warm"
+  },
+  {
+      "kanji": "圧倒的",
+      "hiragana": "あっとう てき",
+      "english": "Overwhelmingly"
+  },
+  {
+      "kanji": "牡蠣",
+      "hiragana": "かき",
+      "english": "Oyster"
+  },
+  {
+      "kanji": "養殖",
+      "hiragana": "ようしょく",
+      "english": "Aquaculture"
+  },
+  {
+      "kanji": "盛ん",
+      "hiragana": "さかん",
+      "english": "Thriving"
+  },
+  {
+      "kanji": "消費",
+      "hiragana": "しょうひ",
+      "english": "Consumption"
+  },
+  {
+      "kanji": "独自",
+      "hiragana": "どくじ",
+      "english": "Original/unique"
+  },
+  {
+      "kanji": "特徴",
+      "hiragana": "とくちょう",
+      "english": "Features/characteristics"
+  },
+  {
+      "kanji": "まるで",
+      "hiragana": "まるで",
+      "english": "As if.."
+  },
+  {
+      "kanji": "感覚",
+      "hiragana": "かんかく",
+      "english": "Feeling/sense"
+  },
+  {
+      "kanji": "味わう",
+      "hiragana": "あじわう",
+      "english": "Taste"
+  },
+  {
+      "kanji": "落ち着いて",
+      "hiragana": "おちついて",
+      "english": "Calm"
+  },
+  {
+      "kanji": "蛇口",
+      "hiragana": "じゃぐち",
+      "english": "Faucet/tap"
+  },
+  {
+      "kanji": "至る",
+      "hiragana": "いたる",
+      "english": "All over"
+  },
+  {
+      "kanji": "至る所に",
+      "hiragana": "いたる ところ に",
+      "english": "Everywhere"
+  },
+  {
+      "kanji": "開く",
+      "hiragana": "ひらく",
+      "english": "Open"
+  },
+  {
+      "kanji": "ごとに",
+      "hiragana": "ごとに",
+      "english": "Every"
+  },
+  {
+      "kanji": "お遍路",
+      "hiragana": "おへんろ",
+      "english": "Pilgrimage"
+  },
+  {
+      "kanji": "体験する",
+      "hiragana": "たいけん する",
+      "english": "Experience"
+  },
+  {
+      "kanji": "湧いて",
+      "hiragana": "わいて",
+      "english": "Well up/bubble up"
+  },
+  {
+      "kanji": "呼ぶ",
+      "hiragana": "よぶ",
+      "english": "To call/to name"
+  },
+  {
+      "kanji": "目的",
+      "hiragana": "もくてき",
+      "english": "Purpose"
+  },
+  {
+      "kanji": "離れた",
+      "hiragana": "はなれた",
+      "english": "Distant"
+  },
+  {
+      "kanji": "位置する",
+      "hiragana": "いちする",
+      "english": "To position/be located"
+  },
+  {
+      "kanji": "魅力",
+      "hiragana": "みりょく",
+      "english": "Charm/attraction"
+  },
+  {
+      "kanji": "南国",
+      "hiragana": "なんごく",
+      "english": "Tropical"
+  },
+  {
+      "kanji": "気分",
+      "hiragana": "きぶん",
+      "english": "Feeling/mood/vibe"
+  }
+
+]
