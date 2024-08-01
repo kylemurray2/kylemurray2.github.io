@@ -72,7 +72,7 @@ toggleDirectionButton.addEventListener('click', () => {
 
 resetButton.addEventListener('click', () => {
     // Reload vocabulary from JSON file
-    fetch('../v.json')
+    fetch('vocabulary.json')
       .then(response => response.json())
       .then(data => {
         vocabulary = data;
