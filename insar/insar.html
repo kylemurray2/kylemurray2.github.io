@@ -11,10 +11,11 @@
             background-size: cover;
             background-attachment: fixed;
             color: white;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            /* Font will be inherited from styles.css */
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-family: 'Courier New', monospace, Consolas, 'Lucida Console';
         }
 
         .container {
@@ -48,9 +49,9 @@
         }
 
         .option-card h2 {
-            color: #00ffff;
+            color: #ffffff;
             margin-bottom: 20px;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 300;
             letter-spacing: 1px;
             text-transform: none;
@@ -58,7 +59,7 @@
         }
 
         .option-card p {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
             margin-bottom: 20px;
             color: #a0a8b0;
@@ -66,7 +67,7 @@
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 300;
             margin-bottom: 40px;
             color: white;
@@ -84,7 +85,7 @@
             border: 2px solid #00ffff;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -114,19 +115,17 @@
 
         .platform-images {
             margin-top: 60px;
-            padding: 20px;
-            background: rgba(0, 10, 20, 0.85);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 30px rgba(0, 150, 255, 0.1);
-            display: flex;
-            justify-content: center;
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
         }
 
         .full-image {
-            width: 66.67%;
+            width: 50%;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
+            display: block;
         }
 
         .full-image:last-child {
@@ -134,16 +133,34 @@
         }
 
         h2 {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         p, div, button, a {
-            font-size: 16px;
+            font-size: 14px;
+        }
+
+        /* Add this to ensure all text follows the same font family */
+        * {
+            font-family: 'Courier New', monospace, Consolas, 'Lucida Console';
+        }
+
+        .robot-image {
+            width: 127px;
+            height: 78px;
+            position: fixed;
+            top: 45px;
+            left: 10px;
+            object-fit: none;
+            object-position: 0 0;
+            z-index: 99;
         }
     </style>
 </head>
 <body>
     <button class="platform-return-button" onclick="window.location.href='../index.html'">Return to platform</button>
+    
+    <img src="../robot/Destroyer/Idle.png" alt="Robot" class="robot-image">
     
     <div class="container">
         <h1>InSAR Research Projects</h1>

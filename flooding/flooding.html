@@ -2,131 +2,62 @@
 <html>
 <head>
     <title>Coastal Flooding Research</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            background-image: url('https://labs.phaser.io/assets/skies/space3.png');
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
+        /* Only keep unique custom styles, override others to match global */
+        
+        /* Ensure the container has proper top padding */
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding-top: 50px; /* Match global styles */
         }
-
-        .abstract {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
-        }
-
-        .slider-container {
-            display: flex;
-            gap: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .slider {
-            position: relative;
-            flex: 1;
-        }
-
-        .slide {
-            display: none;
-            width: 100%;
-        }
-
-        .slide.active {
-            display: block;
-        }
-
-        .slide img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .caption {
-            width: 300px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: background 0.3s;
-        }
-
-        .nav-button:hover {
-            background: rgba(0, 0, 255, 0.7);
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
+        
+        /* Override the platform return button to match global styles */
         .platform-return-button {
             position: fixed;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
+            top: 10px;
+            left: 10px;
+            padding: 8px 15px;
             background-color: rgba(0, 0, 0, 0.7);
             color: #00ffff;
             text-decoration: none;
-            border: 2px solid #00ffff;
+            border: 1px solid #00ffff;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .paper-title {
+            margin-top: 10px;
         }
 
-        .platform-return-button:hover {
-            background-color: rgba(0, 255, 255, 0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
-        }
-
-        h1 {
-            font-size: 28px;
-        }
-
-        h2 {
-            font-size: 22px;
-        }
-
-        p, div, button {
-            font-size: 16px;
+        .robot-image {
+            width: 127px;
+            height: 78px;
+            position: fixed;
+            top: 45px; /* Position it below the button */
+            left: 10px; /* Align with the button */
+            /* Only show first frame of spritesheet */
+            object-fit: none;
+            object-position: 0 0;
+            z-index: 99; /* Ensure it's below the button (100) but above other content */
         }
     </style>
 </head>
 <body>
+    <!-- Return button -->
     <button class="platform-return-button" onclick="window.location.href='../index.html'">Return to platform</button>
     
+    <!-- Add robot image right after the button -->
+    <img src="../robot/Destroyer/Idle.png" alt="Robot" class="robot-image">
+    
     <div class="container">
+        <h1 class="paper-title">Coastal land subsidence accelerates timelines for future flood exposure in Hawai'i</h1>
+        
         <div class="abstract">
             <h2>Abstract</h2>
             <div id="abstract-content"></div>

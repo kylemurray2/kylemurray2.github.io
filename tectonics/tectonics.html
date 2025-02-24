@@ -6,10 +6,57 @@
     <!-- Any page-specific styles can remain here -->
     <style>
         /* Custom styles for this page only (if needed) */
+        .option-card h2 {
+            color: #ffffff; /* Changed from #00ffff to white */
+            margin-bottom: 20px;
+            font-size: 18px; /* Reduced from 22px */
+            font-weight: normal;
+        }
+        .platform-images img {
+            width: 50%; /* Make images half current size */
+            margin: 0 auto;
+            display: block;
+        }
+        .platform-images {
+            margin-top: 60px;
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        p, div, button, a {
+            font-size: 14px; /* Reduced from 16px */
+        }
+        /* Keep bold only for buttons if desired */
+        .platform-return-button {
+            /* Keep the font-weight: bold; */
+        }
+        .read-more {
+            font-weight: normal;
+        }
+        /* Add robot image styling */
+        .robot-image {
+            width: 127px;
+            height: 78px;
+            position: fixed;
+            top: 45px; /* Position it below the button */
+            left: 10px; /* Align with the button */
+            /* Only show first frame of spritesheet */
+            object-fit: none;
+            object-position: 0 0;
+            z-index: 99; /* Ensure it's below the button (100) but above other content */
+        }
     </style>
 </head>
 <body class="flex-center">
+    <!-- Return button -->
     <button class="platform-return-button" onclick="window.location.href='../index.html'">Return to platform</button>
+    
+    <!-- Add robot image right after the button -->
+    <img src="../robot/Destroyer/Idle.png" alt="Robot" class="robot-image">
     
     <div class="container">
         <h1>Tectonics Research Projects</h1>

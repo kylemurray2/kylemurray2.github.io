@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Groundwater Research</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
         body {
             margin: 0;
@@ -11,10 +12,15 @@
             background-size: cover;
             background-attachment: fixed;
             color: white;
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', monospace, Consolas, 'Lucida Console';
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* Add this to ensure all text follows the same font family */
+        * {
+            font-family: 'Courier New', monospace, Consolas, 'Lucida Console';
         }
 
         .container {
@@ -48,13 +54,14 @@
         }
 
         .option-card h2 {
-            color: #00ffff;
+            color: #ffffff;
             margin-bottom: 20px;
-            font-size: 1.4em;
+            font-size: 18px;
+            font-weight: normal;
         }
 
         .option-card p {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
             margin-bottom: 20px;
         }
@@ -70,7 +77,7 @@
             border: 2px solid #00ffff;
             border-radius: 5px;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -90,6 +97,7 @@
             border: 2px solid #00ffff;
             border-radius: 5px;
             transition: all 0.3s ease;
+            font-weight: normal;
         }
 
         .read-more:hover {
@@ -100,38 +108,47 @@
 
         .platform-images {
             margin-top: 60px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+            padding: 0;
+            background: transparent;
+            border: none;
+            box-shadow: none;
         }
 
         .full-image {
-            width: 100%;
+            width: 50%;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
+            display: block;
         }
 
         .full-image:last-child {
             margin-bottom: 0;
         }
 
-        h1 {
-            font-size: 28px;
-        }
-
-        h2 {
-            font-size: 22px;
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
         }
 
         p, div, button, a {
-            font-size: 16px;
+            font-size: 14px;
+        }
+
+        .robot-image {
+            width: 127px;
+            height: 78px;
+            position: fixed;
+            top: 45px;
+            left: 10px;
+            object-fit: none;
+            object-position: 0 0;
+            z-index: 99;
         }
     </style>
 </head>
 <body>
     <button class="platform-return-button" onclick="window.location.href='../index.html'">Return to platform</button>
+    
+    <img src="../robot/Destroyer/Idle.png" alt="Robot" class="robot-image">
     
     <div class="container">
         <h1>Groundwater Research Projects</h1>

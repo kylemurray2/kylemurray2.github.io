@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>California Subsidence Research</title>
+    <title>Tropospheric Corrections Research</title>
     <link rel="stylesheet" href="../styles.css">
+    <!-- Any page-specific styles can remain here -->
     <style>
         /* Custom styles for this page only (if needed) */
     </style>
 </head>
 <body>
-    <button class="platform-return-button" onclick="window.location.href='groundwater.html'">← Back</button>
+    <button class="platform-return-button" onclick="window.location.href='insar.html'">← Back</button>
     
     <div class="container">
-        <h1 class="paper-title">Short-lived Pause in Central California Subsidence After Heavy Winter Precipitation of 2017</h1>
+        <h1 class="paper-title">Tropospheric Corrections for InSAR: Statistical assessments and applications to the Central United States and Mexico</h1>
         
         <div class="abstract">
             <h2>Abstract</h2>
@@ -30,7 +31,7 @@
 
     <script>
         // Load abstract
-        fetch('abstract_a.txt')
+        fetch('abstract_b.txt')
             .then(response => response.text())
             .then(text => {
                 document.getElementById('abstract-content').innerText = text;
@@ -51,7 +52,7 @@
         Promise.all([
             // Load captions
             Promise.all([1, 2, 3, 4, 5].map(i => 
-                fetch(`ac${i}.txt`)
+                fetch(`bc${i}.txt`)
                     .then(response => response.text())
                     .catch(() => '')
             )),
@@ -60,7 +61,7 @@
                 const div = document.createElement('div');
                 div.className = 'slide';
                 const img = document.createElement('img');
-                img.src = `a${i}.png`;
+                img.src = `b${i}.png`;
                 div.appendChild(img);
                 return div;
             }))

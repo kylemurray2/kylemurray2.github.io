@@ -1,4 +1,8 @@
 /* Base styles */
+body, h1, h2, h3, h4, h5, h6, p, div, span, a, button, input, textarea, select, option {
+    font-family: 'Courier New', monospace, Consolas, 'Lucida Console' !important;
+}
+
 body {
     margin: 0;
     padding: 20px;
@@ -7,20 +11,15 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: white;
-    font-family: Arial, sans-serif;
 }
 
 /* Typography */
-h1 {
-    font-size: 28px;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
 
-h2 {
-    font-size: 22px;
-}
-
-p, div, button, a {
-    font-size: 16px;
+p, div, span, a {
+    font-weight: normal;
 }
 
 /* Layout for platform pages */
@@ -34,23 +33,25 @@ p, div, button, a {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 /* Platform return button */
 .platform-return-button {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
+    top: 10px;
+    left: 10px;
+    padding: 8px 15px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #00ffff;
     text-decoration: none;
-    border: 2px solid #00ffff;
+    border: 1px solid #00ffff;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
+    z-index: 100;
 }
 
 .platform-return-button:hover {
@@ -67,6 +68,9 @@ p, div, button, a {
     margin-bottom: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+    max-width: 672px; /* 7 inches at 96dpi */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Slider elements */
@@ -156,9 +160,9 @@ p, div, button, a {
 }
 
 .option-card h2 {
-    color: #00ffff;
+    color: #ffffff;
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .read-more {
@@ -170,6 +174,7 @@ p, div, button, a {
     border: 2px solid #00ffff;
     border-radius: 5px;
     transition: all 0.3s ease;
+    font-weight: normal;
 }
 
 .read-more:hover {
@@ -180,17 +185,20 @@ p, div, button, a {
 
 .platform-images {
     margin-top: 60px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
 }
 
 .full-image {
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .full-image:last-child {
@@ -261,4 +269,18 @@ p, div, button, a {
 .gallery-item img {
     width: 100%;
     border-radius: 4px;
+}
+
+/* Add a new style for the paper title that will appear above abstracts */
+.paper-title {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    max-width: 672px; /* 7 inches at 96dpi */
+    margin-left: auto;
+    margin-right: auto;
 } 
