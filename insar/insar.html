@@ -48,9 +48,9 @@
         }
 
         .option-card h2 {
-            color: white;
+            color: #00ffff;
             margin-bottom: 20px;
-            font-size: 1.4em;
+            font-size: 22px;
             font-weight: 300;
             letter-spacing: 1px;
             text-transform: none;
@@ -66,46 +66,50 @@
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 28px;
             font-weight: 300;
             margin-bottom: 40px;
             color: white;
             letter-spacing: 2px;
         }
 
-        .home-button {
+        .platform-return-button {
             position: fixed;
             top: 20px;
             left: 20px;
             padding: 10px 20px;
-            background: rgba(0, 120, 255, 0.2);
-            color: white;
-            border: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00ffff;
+            text-decoration: none;
+            border: 2px solid #00ffff;
             border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 300;
-            letter-spacing: 0.5px;
         }
 
-        .home-button:hover {
-            background: rgba(0, 120, 255, 0.4);
+        .platform-return-button:hover {
+            background-color: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
         }
 
         .read-more {
             display: inline-block;
             padding: 10px 20px;
-            background: rgba(0, 120, 255, 0.2);
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
+            color: #00ffff;
             text-decoration: none;
+            border: 2px solid #00ffff;
             border-radius: 5px;
             transition: all 0.3s ease;
-            font-weight: 300;
-            letter-spacing: 1px;
         }
 
         .read-more:hover {
-            background: rgba(0, 120, 255, 0.4);
+            background-color: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
         }
 
         .platform-images {
@@ -128,10 +132,18 @@
         .full-image:last-child {
             margin-bottom: 0;
         }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p, div, button, a {
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <button class="home-button" onclick="window.location.href='../index.html'">← Home</button>
+    <button class="platform-return-button" onclick="window.location.href='../index.html'">Return to platform</button>
     
     <div class="container">
         <h1>InSAR Research Projects</h1>

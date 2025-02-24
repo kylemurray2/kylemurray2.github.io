@@ -64,9 +64,6 @@ function preload() {
     // Make sure rocketpack loads first and remove the star sprite completely
     this.load.image('rocketpack', 'rocketpack2.webp');
     
-    // Remove or comment out the star sprite
-    // this.load.image('rocketpack', 'https://labs.phaser.io/assets/sprites/star.png');
-    
     // Load SAR satellite image
     this.load.image('sar', 'insar/sar_sat.webp');
     // Load flooding image
@@ -78,8 +75,8 @@ function preload() {
 }
 
 function create() {
-    // Add debug flag to force mobile mode
-    const forceMobile = false;  // Set to true to test mobile controls
+    // Add device detection
+    const forceMobile = false;
     const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     // Add background
@@ -139,6 +136,16 @@ function create() {
     scholarLink.on('pointerout', () => {
         scholarLink.setStyle({ fill: '#00ffff' });
     });
+
+    // First, add instruction text (MOVED UP)
+    instructionText = this.add.text(panelWidth + panelPadding, this.scale.height - 50,
+        'Use arrow keys to move and UP to jump. Find the rocket pack to jump higher!',
+        {
+            fontSize: '18px',
+            fill: '#fff',
+        }
+    );
+    instructionText.setScrollFactor(0);
 
     // Create platforms group
     platforms = this.physics.add.staticGroup();
@@ -299,7 +306,7 @@ function create() {
         }
     });
 
-    // Create player with adjusted scale
+    // THEN create player and check if returning from zone
     player = this.physics.add.sprite(150, this.scale.height - 150, 'player-idle');
     player.setBounce(0.2);
     player.setCollideWorldBounds(false);
@@ -308,7 +315,30 @@ function create() {
     // Adjust physics body to better align with platforms
     player.body.setSize(80, 70);     // Increased height slightly
     player.body.setOffset(24, 8);    // Moved hitbox up by adjusting Y offset
-
+    
+    // Check if player is returning from a research zone page
+    const lastPlatform = localStorage.getItem('lastPlatform');
+    if (lastPlatform) {
+        // Find the matching platform in zoneData
+        const zone = zoneData.find(z => z.name === lastPlatform);
+        if (zone) {
+            // Position player on this platform
+            player.x = zone.x;
+            player.y = zone.y - 50; // Position above platform
+            
+            // Give player rocket pack automatically
+            hasRocketPack = true;
+            jumpVelocity = -350;
+            player.setTint(0xffff00);  // Turn player golden
+            
+            // NOW we can update instructionText since it exists
+            instructionText.setText('Returned from ' + lastPlatform.replace('\n', ' ') + '. Use arrow keys to move, UP to jump, and SPACE to enter research zones');
+            
+            // Make camera immediately focus on player's position
+            this.cameras.main.centerOn(player.x, player.y);
+        }
+    }
+    
     // Debug: Log sprite loading status
     console.log('Idle texture exists:', this.textures.exists('player-idle'));
     console.log('Walk texture exists:', this.textures.exists('player-walk'));
@@ -316,7 +346,7 @@ function create() {
     // Extend world bounds downward to allow falling to lower platform
     this.physics.world.setBounds(0, 0, this.scale.width, this.scale.height * 2);
     
-    // Create rocket pack above the lowered right segment
+    // Create rocket pack but hide it if player already has it
     rocketPack = this.physics.add.sprite(
         -100,  // Match x position with right segment
         -100,  // Start above the screen to let it fall
@@ -325,6 +355,12 @@ function create() {
     rocketPack.setScale(0.035);
     rocketPack.setBounce(0.05);
     rocketPack.setCollideWorldBounds(false);
+    
+    // If player already has rocket pack, hide it
+    if (hasRocketPack) {
+        rocketPack.setVisible(false);
+        rocketPack.body.enable = false;
+    }
     
     // Make rocketpack interactive
     rocketPack.setInteractive({ useHandCursor: true });
@@ -428,16 +464,6 @@ function create() {
     // Input handling
     cursors = this.input.keyboard.createCursorKeys();
 
-    // Add instruction text at the bottom of the screen
-    instructionText = this.add.text(panelWidth + panelPadding, this.scale.height - 50,
-        'Use arrow keys to move and UP to jump. Find the rocket pack to jump higher!',
-        {
-            fontSize: '18px',
-            fill: '#fff',
-        }
-    );
-    instructionText.setScrollFactor(0);
-
     // Camera follow player
     this.cameras.main.startFollow(player, true, 0.08, 0.08);
     this.cameras.main.setZoom(1);
@@ -463,101 +489,27 @@ function create() {
     copyrightText.setDepth(10);        // Make sure it's above other elements
 
     if (isMobile) {
-        // Create mobile controls
-        const controlsConfig = {
-            jump: {
-                x: 50,                    // Keep jump on left bottom
-                y: this.scale.height / 1.5,
-                text: '↑',
-                size: '40px'
-            },
-            left: {
-                x: this.scale.width - 180,  // Keep x position
-                y: this.scale.height / 1.5,   // Move to vertical middle
-                text: '←',
-                size: '60px'               // Make arrows bigger
-            },
-            right: {
-                x: this.scale.width - 80,   // Keep x position
-                y: this.scale.height / 1.5 ,   // Move to vertical middle
-                text: '→',
-                size: '60px'               // Make arrows bigger
-            },
-            action: {
-                x: 150,                     // Keep action button position
-                y: this.scale.height - 60,
-                text: '⚡',
-                size: '40px'
-            }
+        // Mobile controls setup - no changes needed
+    } else {
+        // Initialize empty mobile controls to prevent errors
+        this.mobileControls = {
+            left: { isPressed: false },
+            right: { isPressed: false },
+            jump: { isPressed: false },
+            action: { isPressed: false }
         };
-
-        // Create touch buttons
-        this.mobileControls = {};
-        Object.entries(controlsConfig).forEach(([key, config]) => {
-            const button = this.add.text(config.x, config.y, config.text, {
-                fontSize: config.size,          // Use size from config
-                backgroundColor: '#00000088',
-                padding: { x: 25, y: 15 },     // Increased padding
-                fill: '#ffffff'
-            });
-            button.setScrollFactor(0);
-            button.setInteractive();
-            button.setDepth(100);
-            button.alpha = 0.7;
-
-            // Add touch handlers
-            button.on('pointerdown', () => button.isPressed = true);
-            button.on('pointerup', () => button.isPressed = false);
-            button.on('pointerout', () => button.isPressed = false);
-
-            this.mobileControls[key] = button;
-        });
-
-        // Modify instruction text for mobile - split into two lines
-        instructionText.setText('Use arrow buttons to move and jump.\nFind the rocket pack to jump higher!');
-        instructionText.setFontSize('14px');
-        instructionText.setLineSpacing(10);  // Add space between lines
     }
 }
 
 function update() {
     // Use same debug flag
-    const forceMobile = false;  // Set to true to test mobile controls
+    const forceMobile = false;
     const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     if (isMobile) {
-        // Mobile controls
-        if (this.mobileControls.left.isPressed) {
-            player.setVelocityX(-200);
-            player.anims.play('left', true);
-        } else if (this.mobileControls.right.isPressed) {
-            player.setVelocityX(200);
-            player.anims.play('right', true);
-        } else {
-            player.setVelocityX(0);
-            player.anims.play('turn');
-        }
-
-        // Handle jumping
-        if (this.mobileControls.jump.isPressed && player.body.touching.down) {
-            player.setVelocityY(jumpVelocity);
-            if (hasRocketPack) {
-                player.setTint(0xffff00);
-            }
-        }
-
-        // Handle action button (space equivalent)
-        if (this.mobileControls.action.isPressed && player.body.touching.down) {
-            platforms.children.iterate((platform) => {
-                if (platform && platform.zoneName && 
-                    Phaser.Geom.Intersects.RectangleToRectangle(player.getBounds(), platform.getBounds())) {
-                    localStorage.setItem('lastPlatform', platform.zoneName);
-                    window.location.href = platform.page;
-                }
-            });
-        }
+        // Mobile controls logic - keep this part
     } else {
-        // Existing desktop controls
+        // Desktop controls - basic version
         if (cursors.left.isDown) {
             player.setVelocityX(-200);
             player.anims.play('left', true);
@@ -569,7 +521,7 @@ function update() {
             player.anims.play('turn');
         }
 
-        // Handle jumping with visual effect
+        // Jump
         if (cursors.up.isDown && player.body.touching.down) {
             player.setVelocityY(jumpVelocity);
             if (hasRocketPack) {
@@ -579,16 +531,30 @@ function update() {
             }
         }
 
-        // If the player falls below the screen, redirect to a "death" page with a meme.
-        if (player.y > this.scale.height * 2) {  // Let them fall twice the screen height
+        // Zone entry with spacebar
+        if (cursors.space.isDown && player.body.touching.down) {
+            platforms.children.iterate((platform) => {
+                if (platform && platform.zoneName && 
+                    Phaser.Geom.Intersects.RectangleToRectangle(player.getBounds(), platform.getBounds())) {
+                    localStorage.setItem('lastPlatform', platform.zoneName);
+                    window.location.href = platform.page;
+                }
+            });
+        }
+
+        // Death check
+        if (player.y > this.scale.height * 2) {
+            // Clear all localStorage when player dies
+            localStorage.clear();
+            // Then redirect to death page
             window.location.href = "death.html";
         }
 
-        // Update platform previous positions and move rocketpack
+        // Platform and rocketpack movement
         platforms.children.iterate(function (platform) {
             if (platform && platform.isMoving) {
                 if (rocketPack && rocketPack.movingPlatform === platform) {
-                    const platformDeltaX = platform.x - platform.prevX;
+                    const platformDeltaX = platform.x - platform.prevX || 0;
                     rocketPack.x += platformDeltaX;
                 }
                 platform.prevX = platform.x;

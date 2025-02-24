@@ -89,26 +89,43 @@
             right: 10px;
         }
 
-        .home-button {
+        .platform-return-button {
             position: fixed;
             top: 20px;
             left: 20px;
             padding: 10px 20px;
-            background: rgba(0, 0, 255, 0.7);
-            color: white;
-            border: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00ffff;
+            text-decoration: none;
+            border: 2px solid #00ffff;
             border-radius: 5px;
+            font-weight: bold;
+            font-size: 16px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
         }
 
-        .home-button:hover {
-            background: rgba(0, 0, 255, 0.9);
+        .platform-return-button:hover {
+            background-color: rgba(0, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        p, div, button {
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <button class="home-button" onclick="window.location.href='tectonics.html'">← Back</button>
+    <button class="platform-return-button" onclick="window.location.href='tectonics.html'">← Back</button>
     
     <div class="container">
         <div class="abstract">

@@ -2,20 +2,207 @@
 body {
     margin: 0;
     padding: 20px;
+    min-height: 100vh;
+    background-image: url('https://labs.phaser.io/assets/skies/space3.png');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
-    transition: opacity 0.3s ease-in-out;
 }
 
+/* Typography */
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p, div, button, a {
+    font-size: 16px;
+}
+
+/* Layout for platform pages */
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Common containers */
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    background: white;
+}
+
+/* Platform return button */
+.platform-return-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.platform-return-button:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+/* Abstract container */
+.abstract {
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in forwards;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+}
+
+/* Slider elements */
+.slider-container {
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slider {
+    position: relative;
+    flex: 1;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 255, 0.7);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Research landing pages */
+.options {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.option-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 400px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+}
+
+.option-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.4);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.option-card h2 {
+    color: #00ffff;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: rgba(0, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+}
+
+.platform-images {
+    margin-top: 60px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+}
+
+.full-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.full-image:last-child {
+    margin-bottom: 0;
+}
+
+/* Death page specific */
+.death-image {
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin-bottom: 30px;
 }
 
 /* Navigation */
