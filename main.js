@@ -466,24 +466,28 @@ function create() {
         // Create mobile controls
         const controlsConfig = {
             jump: {
-                x: 50,                    // Move jump to left side
-                y: this.scale.height - 60,
-                text: '↑'
+                x: 50,                    // Keep jump on left bottom
+                y: this.scale.height / 1.5,
+                text: '↑',
+                size: '40px'
             },
             left: {
-                x: this.scale.width - 180,  // Move arrows to right side
-                y: this.scale.height - 60,
-                text: '←'
+                x: this.scale.width - 180,  // Keep x position
+                y: this.scale.height / 1.5,   // Move to vertical middle
+                text: '←',
+                size: '60px'               // Make arrows bigger
             },
             right: {
-                x: this.scale.width - 80,   // Position right arrow next to left arrow
-                y: this.scale.height - 60,
-                text: '→'
+                x: this.scale.width - 80,   // Keep x position
+                y: this.scale.height / 1.5 ,   // Move to vertical middle
+                text: '→',
+                size: '60px'               // Make arrows bigger
             },
             action: {
-                x: 150,                     // Move action button next to jump
+                x: 150,                     // Keep action button position
                 y: this.scale.height - 60,
-                text: '⚡'
+                text: '⚡',
+                size: '40px'
             }
         };
 
@@ -491,9 +495,9 @@ function create() {
         this.mobileControls = {};
         Object.entries(controlsConfig).forEach(([key, config]) => {
             const button = this.add.text(config.x, config.y, config.text, {
-                fontSize: '40px',
+                fontSize: config.size,          // Use size from config
                 backgroundColor: '#00000088',
-                padding: { x: 20, y: 10 },
+                padding: { x: 25, y: 15 },     // Increased padding
                 fill: '#ffffff'
             });
             button.setScrollFactor(0);
