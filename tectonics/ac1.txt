@@ -1,0 +1,6 @@
+Figure 1. Map of the study area spanning the Great Plains in the east to the Basin and Range Province in the west. The Rio
+Grande Rift (RGR) basins (Hudson & Grauch, 2013) are shown in dark gray, the Colorado Plateau is outlined in brown,
+late Neogene volcanism is shown as red polygons with eruptive centers in New Mexico shown as red dots (from
+Geologic Map of New Mexico, New Mexico Bureau of Geology and Mineral Resources, 2003, scale 1:500,000), and
+Quaternary faults are shown as black lines (USGS, Quaternary Fault and Fold Database for the Nation, 2004). Large offset
+faults are shown as bold lines with bar and ball on footwall.

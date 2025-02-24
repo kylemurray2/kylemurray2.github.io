@@ -1,0 +1,2 @@
+Fig. 2. 24 h GPS time series (blue) on 07/17/2016 in central US and timeline of independent data acquisitions (diamonds). SAR acquisitions times are shown in red
+and orange vertical dashed lines. 

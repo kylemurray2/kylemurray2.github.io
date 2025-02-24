@@ -1,0 +1,7 @@
+Fig. 7. Average linear rate maps with respect to mean of nondeforming
+areas (a) before and (c) after phase-elevation dependence correction for
+ascending path. Standard deviation of residual from linear rate at to each
+pixel (b) before and (d) after phase-elevation dependence correction. Time
+series consists of 104 dates spanning the time range November 23, 2015–
+March 19, 2019 with no redundant interferometric pairs. Black triangles in
+(a) correspond to GPS stations in Fig. 8.

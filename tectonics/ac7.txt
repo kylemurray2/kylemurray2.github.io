@@ -1,0 +1,5 @@
+Figure 7. Strain rate maps with Colorado Plateau outlined in brown. (a) First invariant of the strain rate tensor (dilata-
+tion). (b) First eigenvalue of the strain rate tensor (maximum extension). (c) Difference between maximum and mini-
+mum principal strain rates (maximum shear strain rate). Color bar for panel (c) also applies to panels (a) and (b). (d, e) N‐
+sigmas corresponding to (a), (b), and (c) respectively. 2‐sigma contours are plotted in black. N‐sigma values greater than 2
+are above the 95% confidence level.

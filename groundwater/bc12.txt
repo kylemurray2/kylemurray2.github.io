@@ -1,0 +1,5 @@
+Figure 12. SW-NE fault-parallel (a–c) and fault-perpendicular (d–f) velocity profiles from Figure 11 relative to the Garnet Hill fault along with their respective
+gradients (g–i, right-lateral sense of strain is positive, (j–l), compression across the fault is negative). Profiles from damped, Uninhabited Aerial Vehicle
+Synthetic Aperture Radar (UAVSAR), and coupled inversions are shown for comparison. Location of the Garnet Hill fault is indicated by vertical black dashed
+lines in each panel. Damped and UAVSAR were filtered with a 6 pixel (0.25 km) moving average to match the additional smoothing necessary to implement
+the coupled inversion. Interseismic motion has been removed using the UCERF model.

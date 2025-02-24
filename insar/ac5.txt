@@ -1,0 +1,11 @@
+Fig. 5. (a) Total rms for 40 ascending interferograms from south-central
+Mexico versus the number of K -means clusters used in the correction. Zero
+clusters corresponds to the original interferogram with no correction applied,
+and one cluster is equivalent to the uniform phase-elevation dependence
+correction with no spatial variability. The black line is the mean rms of all
+40 interferograms. (b) Averaged semivariogram for 40 interferograms before
+and after phase-elevation dependence correction with and without cluster
+analysis. Shaded colored regions indicate 95% confidence, based on the
+variation within the ensemble of interferograms. The semivariograms from
+corrected interferograms using the windowing approach and the GACOS
+model are shown for comparison (pink and light blue).

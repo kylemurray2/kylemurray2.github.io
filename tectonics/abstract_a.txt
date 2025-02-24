@@ -1,0 +1,15 @@
+We used data from 333 continuous Global Positioning System stations, including 26 stations
+installed in 2006–2007 as part of a collaborative EarthScope experiment, to investigate how deformation is
+distributed near the Rio Grande Rift. Our previous analysis, using data from 2006 to 2010, was consistent
+with a nearly uniform east‐west distributed extensional strain rate of ~1.2 nε/year (nanostrain/year) along
+five profiles spanning a ~1,000‐km region. We built upon this analysis with additional Global Positioning
+System networks and longer time series of data spanning varying time ranges between 1993 and 2018. In all
+five east‐west profiles, extensional strain rates are higher within and west of the fault‐defined rift zone
+than to the east. There is an east‐to‐west increase in Central New Mexico from 0.7 ± 0.1 to 1.8 ± 0.8 nε/year
+that is significant at the 95% confidence level. We found elevated extensional and shear strain rates of over
+10 nε/year along parts of the central Rio Grande Rift, particularly along the southeast edge of the
+Colorado Plateau along part of the Jemez lineament, as well as elevated dilatational strain rates and uplift
+above the Socorro magma body. Results from Euler pole analysis of Global Positioning System velocities
+for sites within the Colorado Plateau show nonrigid behavior with considerable deformation near the
+plateau margins and internal east‐west extension. Our results suggest the Rio Grande Rift is actively
+deforming in an evolving tectonic environment.

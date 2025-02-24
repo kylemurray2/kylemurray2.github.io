@@ -1,0 +1,5 @@
+Fig. 2. Temporal variability of ground deformation. Displacement history at location of GPS station CRCN (Fig. 1) for Sentinel-1 (red dots) and GPS (black dots)
+projected into Sentinel-1 LOS (~38° from vertical), and best-fit model of secular + seasonal signal (green line), with daily stream discharge (light blue curve) at the U.S. Geological
+Survey (USGS) monitoring site at Deer Creek (https://waterdata.usgs.gov). The light gray–shaded area indicates the approximate time range of drought in California, with
+purple shading highlighting the rate changes that began in early 2017. We use GPS position solutions in the NA12 reference frame, available for download on the data
+products pages of the Nevada Geodetic Laboratory (http://geodesy.unr.edu).

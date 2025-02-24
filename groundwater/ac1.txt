@@ -1,0 +1,4 @@
+Fig. 1. Subsidence rates and seasonal amplitudes. (A) Secular rates of displacement in the satellite’s line of sight (LOS) inferred from 40 Sentinel-1 acquisitions
+(November 2014 to November 2016), as well as the Corcoran clay extent (gray, white outline), rivers (black lines, dotted where inferred), major canals (black dashed
+lines), and faults (49) (red lines). Inset indicates location of (A) and (B) (red square), Tulare Basin (blue), and Corcoran clay extent (gray). (B) Amplitude of best-fit
+sinusoidal term. SAF, San Andreas Fault.

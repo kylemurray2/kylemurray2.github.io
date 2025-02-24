@@ -1,0 +1,6 @@
+Figure 4. (a) Future sea levels at location indicated by a black and white circle in b. Solid rainbow colored lines show the sea
+level each decade if subsidence is not accounted for. The dashed rainbow colored lines show the sea level each decade if
+continued subsidence is accounted for (1 cm/yr of subsidence). (b) Map view colored by the decade when each pixel will be
+exposed to flooding (see Fig. 3 for spatial extent of map). (c) The effect of subsidence on the timing of initial flood exposure
+(the number of years flood exposure is shifted earlier in time if subsidence was not accounted for in the model). See Fig. S27
+for uncertainty values for each map. 

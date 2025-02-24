@@ -1,0 +1,5 @@
+Figure 5. Time series showing the total area of land below sea level for the Mapunapuna area (see Figure 3 for extent of data).
+The lines show the estimated area without accounting for subsidence (solid black), area accounting for subsidence (dashed
+black), and the difference between the dashed and solid black lines (solid blue). The lower and upper bounds are shown with
+gray shading and are based on Monte Carlo simulation using uncertainties for the DEM elevations, VLM rates, and SLR
+projections (Section 4.3).

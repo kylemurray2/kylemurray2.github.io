@@ -1,0 +1,27 @@
+Abstract— Interferometric synthetic aperture radar (InSAR)
+allows for mapping of crustal deformation on land with high
+spatial resolution and precision in areas with high signal-to-
+noise ratios. Efforts to obtain precise displacement time series
+globally, however, are severely limited by radar path delays
+within the troposphere. The tropospheric delay is integrated
+along the full path length between the ground and the satellite,
+resulting in correlations between the interferometric phase and
+elevation that can vary dramatically in both space and time.
+We evaluate the performance of spatially variable, empirical
+removal of phase-elevation dependence within SAR interfero-
+grams through the use of the K -means clustering algorithm.
+We apply this method to both synthetic test data, as well as
+to C-band Sentinel-1a/b time series acquired over a large area
+in south-central Mexico along the Pacific coast and inland—
+an area with a large elevation gradient that is of particular
+interest to researchers studying tectonic- and anthropogenic-
+related deformation. We show that the clustering algorithm is
+able to identify cases where tropospheric properties vary across
+topographic divides, reducing total root mean square (rms) by an
+average of 50%, as opposed to a spatially constant phase-elevation
+correction, which has insignificant error reduction. Our approach
+also reduces tropospheric noise while preserving test signals
+in synthetic examples. Finally, we show the average standard
+deviation of the residuals from the best-fit linear rate decreases
+from approximately 3 to 1.5 cm, which corresponds to a change
+in the error on the best-fit linear rate from 0.94 to 0.63 cm/yr.

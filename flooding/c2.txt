@@ -1,0 +1,3 @@
+Figure 2. Map showing rates of subsidence in the Mapunapuna area (see Fig. 1 for spatial extent). Combined time series from
+ALOS-1 and Sentinel-1 ascending and descending are plotted for the main Mapunapuna area and the Kahauiki area. Boxes on
+map show group of pixels averaged for each time series plot. Basemap from [31].

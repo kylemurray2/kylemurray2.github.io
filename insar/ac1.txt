@@ -1,0 +1,6 @@
+Fig. 1. Example showing phase and elevation variability in two distinct
+areas for the interferogram pair June 8, 2015-July 2, 2015. (a) Ascending
+interferogram with blue and orange rectangles encompassing pixels plotted
+as blue and orange in panel (c). (c) Spatial variability of phase-elevation
+dependence. (b) Footprints of ascending (red, track 78) and descending (green,
+track 41) Sentinel-1 tracks used in this study.

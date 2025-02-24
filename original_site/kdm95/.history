@@ -1,0 +1,120 @@
+#+1495294613
+cd eas
+#+1495294632
+cd kdm95/
+#+1495297560
+mv CA* images/
+#+1495298243
+mv CA.jpg images/
+#+1495298334
+cd images
+#+1495298357
+rm CA.jpg
+#+1495298700
+mv ../CA.jpg ./
+#+1495302281
+cp index.html research.html
+#+1495302995
+mv km.jpeg images/
+#+1495382900
+clear
+#+1495383633
+mv site-style.css orig.css
+#+1495385795
+mv cornell.png images/
+#+1495716648
+exit
+#+1535574680
+mv Murray_CV_short.pdf Murray_CV_short_old.pdf
+#+1569360939
+mv * old/
+#+1569361292
+mv ../cornell.pdf ./
+#+1569361322
+cd ...
+#+1569361561
+vi research.html
+#+1569772950
+lt
+#+1574610318
+cd old/
+#+1574610333
+kate contact.html
+#+1574610341
+vi contact.html
+#+1574610386
+vi css/
+#+1574610392
+vi km.css
+#+1574611104
+vi css/km.css
+#+1574611811
+host
+#+1583131353
+mv KDM/* ./
+#+1583131358
+rm -r KDM
+#+1583133668
+vi js1.js
+#+1583134177
+cd fonts/
+#+1583134179
+cd icomoon/
+#+1583134226
+cp style.css ../../
+#+1583134230
+cd ../../
+#+1583135075
+cd fonts/icomoon/
+#+1583135078
+ll
+#+1583135086
+vi Read\ Me.txt
+#+1583135551
+vi i
+#+1583433844
+less index.html
+#+1583435683
+cd images/
+#+1583435689
+mv ../ithacaCrop.png ./
+#+1583435902
+ls images/
+#+1583435916
+mv images/ithacaCrop.png css/
+#+1583435997
+rm style.css
+#+1589139505
+rm -r old2/
+#+1589139512
+mkdir old
+#+1589139517
+mv css old/
+#+1589139521
+mv index.html old/
+#+1589139525
+mv images old/
+#+1589139715
+vi css/style.css
+#+1589139827
+cd css
+#+1589139834
+cd ..
+#+1589139841
+mkdir old2
+#+1589139845
+mv * old2/
+#+1589141143
+cd css/style.css
+#+1589141145
+cd css/
+#+1589141333
+vi style.css
+#+1589222824
+vi index.html
+#+1590027145
+ls
+#+1590027146
+pwd
+#+1590027190
+hostname

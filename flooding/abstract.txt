@@ -1,0 +1,12 @@
+Coastal subsidence exacerbates relative sea level rise, making low-lying areas vulnerable to flooding. In Hawai‘i, the contribution
+of vertical land motion has not been fully studied. This is critical for urban O‘ahu, where infrastructure is on low-lying coastal
+areas with varying sedimentary consolidation. Here we processed Interferometric Synthetic Aperture Radar data from
+2006–2024 for the Hawaiian Islands, referencing them with Global Navigation Satellite System measurements to calculate
+subsidence rates. We also created a two-meter resolution digital elevation model for coastal O‘ahu using 2007–2013 Federal
+Light Detection and Ranging data, which included hydro-enforcement and gap filling with reprocessed data. Using this elevation
+data and vertical land motion measurements, we numerically modeled flood exposure. Results suggest that while island-wide
+subsidence on O‘ahu is about 0.6 ±0.6mm/yr, the south shore has localized rates exceeding 25.0 ±1.0mm/yr. This subsidence,
+which is much faster than Hawaii’s long-term sea level rise rate (1.54 mm/yr since 1905), could expand flood exposure by up to
+53% by 2050 in the Mapunapuna industrial region. Accounting for subsidence compresses the timeline for flood preparedness
+by up to 50 years, emphasizing the need to integrate these insights into planning and policy for sustainable development and
+flood mitigation.

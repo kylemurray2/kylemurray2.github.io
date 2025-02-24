@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D-Displacement Research</title>
+    <style>
+        /* Same styles as flooding.html */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-image: url('https://labs.phaser.io/assets/skies/space3.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .abstract {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 255, 0.2);
+        }
+
+        .slider-container {
+            display: flex;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slider {
+            position: relative;
+            flex: 1;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .caption {
+            width: 300px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+
+        .nav-button:hover {
+            background: rgba(0, 0, 255, 0.7);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(0, 0, 255, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .home-button:hover {
+            background: rgba(0, 0, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='groundwater.html'">← Back</button>
+    
+    <div class="container">
+        <div class="abstract">
+            <h2>Abstract</h2>
+            <div id="abstract-content"></div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <button class="nav-button prev">←</button>
+                <button class="nav-button next">→</button>
+                <div id="slides"></div>
+            </div>
+            <div class="caption" id="current-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Load abstract
+        fetch('abstract_b.txt')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('abstract-content').innerText = text;
+            });
+
+        let currentSlide = 0;
+        let slides = [];
+        let captions = [];
+
+        // Function to show current slide
+        function showSlide(index) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+            document.getElementById('current-caption').innerText = captions[index] || '';
+        }
+
+        // Load images and captions
+        Promise.all([
+            // Load captions
+            Promise.all([1, 2, 3, 4, 5].map(i => 
+                fetch(`bc${i}.txt`)
+                    .then(response => response.text())
+                    .catch(() => '')
+            )),
+            // Create image elements
+            Promise.all([1, 2, 3, 4, 5].map(i => {
+                const div = document.createElement('div');
+                div.className = 'slide';
+                const img = document.createElement('img');
+                img.src = `b${i}.png`;
+                div.appendChild(img);
+                return div;
+            }))
+        ]).then(([loadedCaptions, loadedSlides]) => {
+            captions = loadedCaptions;
+            slides = loadedSlides;
+            
+            const slidesContainer = document.getElementById('slides');
+            slides.forEach(slide => slidesContainer.appendChild(slide));
+            
+            showSlide(0);
+        });
+
+        // Navigation
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html> 

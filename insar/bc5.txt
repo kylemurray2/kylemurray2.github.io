@@ -1,0 +1,3 @@
+Fig. 5. Central US Example: Interferogram (upper left) for date pair 07/17/2016–07/29/2016, modeled tropospheric delays using various independent datasets (1st
+row), corrected interferogram for each correction type (2nd row), and histograms for each corrected interferogram (3rd row). Column headings are grouped by
+weather models (red), phase-elevation dependence (yellow), GNSS (blue), and precipitable water vapor data (green). 

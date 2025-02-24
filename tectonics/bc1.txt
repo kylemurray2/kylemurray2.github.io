@@ -1,0 +1,5 @@
+Fig. 1. Study area showing the Western rift (WR) and Eastern rift (ER) that formed around the unusually thick lithosphere of the Tanzania craton (yellow shaded
+region). White rectangles show locations of ascending Sentinel-1a/b paths used in this study. GNSS velocity field (vectors; King et al., 2019; Knappe et al., 2020) show
+general eastward velocity increase as the Nubia plate separates from the Somalia plate. Teleseismically detected earthquakes from 1976 to 2021 from NEIC (blue
+circles), Holocene volcanoes (orange triangles; Venzke, 2013), and faults (red lines (Ebinger et al., 2024)) are shown. GNSS sites are referenced to the stable African
+(Nubian) plate and span variable time ranges from 2002 to 2022. Nubian (Nub), Victorian (Vic), and Somalian (Som) plates are labeled.

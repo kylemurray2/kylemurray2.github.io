@@ -1,0 +1,188 @@
+.home-bg {
+    background-image: url("../images/km.jpg");
+    background-color: black;
+    background-size:100%;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    background-origin: content-box;
+    background-attachment: fixed;
+}
+
+.bod {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.research-bg {
+    background-image: url("../images/km4.jpg");
+    background-color: black;
+    background-size:100%;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    background-origin: content-box;
+    background-attachment: fixed;
+}
+
+.contact-bg {
+    background-image: url("../images/km3.jpg");
+    background-color: black;
+    background-size:100%;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    background-origin: content-box;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-name {
+    color: white;
+    font-size: 30px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+    letter-spacing: 5px;
+    font-family: Optima;
+    margin-top: 30px; 
+}
+
+.title {
+    margin-top: 100px;
+    
+}
+
+.logo {
+    margin-top: 0 px;
+    margin-left: 30px;
+    max-width: 600px;   
+    float: right;
+}
+
+.blank {
+    margin-top: 500px;
+}
+
+/* Flexbox */
+@import "compass/css3";
+
+.flex-container {
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    margin-right: 20px;
+    max-width: 525px;
+    margin-left: 0;
+    display:   flex;
+    flex-flow: row wrap;
+}
+
+.flex-item {
+  padding: 2px;
+  height: 10px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 15px;
+  color: white;
+/*justify-content: space-between;*/
+
+}
+/*Top navigation bar */
+nav {
+
+
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    font-size: 20px;
+    
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+    color: white;
+    font-family: Optima;
+}
+
+.description {
+    color: black
+    /*margin-left: 5px;*/
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: hidden;
+}
+
+p {
+    max-width: 500px;
+    min-width: 200px;
+    
+}
+
+.description p {
+    color: white;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: block;
+    font-family: Optima;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+
+}
+.description p a{
+    color: #ffffff;
+    text-decoration: none;
+    text-decoration: underline;
+    font-family: Optima;
+}
+    
+.bg {
+    background-color:rgba(0,0,0,0.0);
+    padding: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.rhead {
+    font-size: 30px;
+    color: white;
+    font-family: Optima;
+    font-style: bold;
+}
+
+.contact {
+    color: #ffffff;
+}
+
+.contact ul li {
+    list-style: none;
+    color: #ffffff;
+}
+
+.contact ul li a {
+   /* display: block; */
+    text-decoration: none;
+    color: #ffffff;
+}
+.profile {
+    margin-left: 40px;
+}

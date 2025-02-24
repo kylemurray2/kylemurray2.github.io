@@ -1,0 +1,2 @@
+Fig. 2. Elevation versus phase for ascending interferogram June 8, 2015–July 2, 2015 with (a) best linear fit, (b) separate linear fits, and (c) power-law fits
+to six clusters. We reduce the impact of outliers by removing the points within each cluster that are furthest from the centroid (5% of points for each cluster).

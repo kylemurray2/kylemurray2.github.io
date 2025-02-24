@@ -1,0 +1,4 @@
+Figure 5. GPS velocities (black vectors) in the NA12 reference frame, available from the Nevada Geodetic Laboratory
+(http://geodesy.unr.edu). Color scale is UCERF-3: interpolated GPS east velocities (a) and north velocities (b) (Parsons
+et al., 2013). These velocities were used to subtract motion associated with the plate boundary from Interferometric
+Synthetic Aperture Radar (InSAR)-derived displacements.

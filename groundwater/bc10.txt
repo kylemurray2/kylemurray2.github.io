@@ -1,0 +1,3 @@
+Figure 10. Cross sections (from red line in Figure 9a) of inferred 3-D velocities in 2017, with the damped Sentinel-1
+inversion (orange), Sentinel-1 and Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR) combined
+inversion (blue), and the coupled inversion of Sentinel-1 data (green).

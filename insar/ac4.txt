@@ -1,0 +1,3 @@
+Fig. 4. (a) Ascending interferogram June 8, 2015–July 2, 2015. (b) Tropospheric model of uniform (one cluster) phase-elevation dependence [see Fig. 2(a)].
+(c) Cluster power-law phase-elevation model [see Fig. 2(c)]. (d) Six rectangular window phase-elevation model. (e) GACOS model of the tropospheric delay.
+(f)–(i) Respective corrected interferograms for (b)–(e). All panels shown with the same color range.

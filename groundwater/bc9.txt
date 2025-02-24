@@ -1,0 +1,6 @@
+Figure 9. Results from inversion of multiple line-of-sight (LOS) values for X, Y, and Z velocity (Rows 1, 2, and 3, respectively). The time period is approximately
+from 02/2017–12/2017. Values are saturated outside of the range −6–+6 cm/yr for horizontal velocities and −9 – +9 cm/yr for vertical velocities. (Column 1)
+Inversion of data from three Sentinel-1 tracks and Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR) with no damping. (Column 2) Inversion of
+only Sentinel-1 data with damping of the Y term. (Column 3) Inversion of only Sentinel-1 data with the elastically coupled inversion method. Red line in panel
+(a) indicates location of cross section in Figure 10. UCERF model has been removed from each component prior to each inversion to reduce the contribution
+from large-scale tectonic signals.

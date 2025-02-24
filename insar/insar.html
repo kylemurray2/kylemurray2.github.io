@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>InSAR Research</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-image: url('https://labs.phaser.io/assets/skies/space3.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .options {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .option-card {
+            background: rgba(0, 10, 20, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            width: 450px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.1);
+        }
+
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px rgba(0, 150, 255, 0.2);
+            background: rgba(0, 15, 30, 0.95);
+        }
+
+        .option-card h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: none;
+            line-height: 1.3;
+        }
+
+        .option-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #a0a8b0;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(0, 120, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .home-button:hover {
+            background: rgba(0, 120, 255, 0.4);
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(0, 120, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .read-more:hover {
+            background: rgba(0, 120, 255, 0.4);
+        }
+
+        .platform-images {
+            margin-top: 60px;
+            padding: 20px;
+            background: rgba(0, 10, 20, 0.85);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 150, 255, 0.1);
+            display: flex;
+            justify-content: center;
+        }
+
+        .full-image {
+            width: 66.67%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .full-image:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='../index.html'">← Home</button>
+    
+    <div class="container">
+        <h1>InSAR Research Projects</h1>
+        
+        <div class="options">
+            <div class="option-card" onclick="window.location.href='cluster.html'">
+                <h2>Cluster-Based Empirical Tropospheric Corrections Applied to InSAR Time Series Analysis</h2>
+                <a href="cluster.html" class="read-more">Read More →</a>
+            </div>
+            
+            <div class="option-card" onclick="window.location.href='tropospheric.html'">
+                <h2>Tropospheric Corrections for InSAR: Statistical assessments and applications to the Central United States and Mexico</h2>
+                <a href="tropospheric.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+
+        <div class="platform-images">
+            <img src="sar_sat.webp" alt="InSAR Research" class="full-image">
+        </div>
+    </div>
+</body>
+</html>

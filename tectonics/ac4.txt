@@ -1,0 +1,6 @@
+Figure 4. Rate map of the Socorro Magma Body (SMB) located in central New
+Mexico with horizontal rate vectors and 90% confidence ellipses, and vertical
+rates in color scale (blue is subsidence, and red is uplift). The dashed red line
+shows the outline of the Socorro Seismic Anomaly (SSA) as defined by Balch et al.
+(1997). Quaternary faults shown as white lines, late Neogene volcanics shown in
+orange, and RGR basins shown in dark gray.

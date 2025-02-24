@@ -1,0 +1,4 @@
+Figure 6. Line-of-sight geometries for the four satellite tracks swaths used in this study in cross section (a) and map
+view (b), with satellite azimuth direction and incidence angle. Solid lines indicate look vectors for ascending (north-
+northwest traveling) and descending (south-southwest traveling) tracks (dashed lines). Line colors correspond to colors
+of footprints in Figure 1.

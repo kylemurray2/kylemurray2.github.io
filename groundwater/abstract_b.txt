@@ -1,0 +1,14 @@
+We explore the use of elastic Green’s functions in inversions of one-dimensional
+Interferometric Synthetic Aperture Radar (InSAR) observations to recover three-dimensional
+displacement fields. This approach enforces coupling of the horizontal displacements and limits the
+need for prior assumptions about the subsurface sources, driving the deformation or explicit damping of
+a given dimension of the full 3D deformation field. We apply these methods to data from the Coachella
+Valley, California, where artificial groundwater recharge in 2017 and the associated increases in pore
+pressure resulted in ground displacements of up to 12 cm. This area is covered by Sentinel-1a/b data for
+two overlapping paths from both ascending and descending orbits, as well as an east-west flight line from
+the Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR), providing five unique line-of-sight
+geometries. The regularization approaches applied to the Sentinel data alone agree in most respects, with
+the elastically coupled approach producing a slightly better fit to the independent UAVSAR observations.
+Our results suggest that the 2017 groundwater entrainment in the Coachella Valley is likely associated
+with significant horizontal displacements that led to contraction across the fault bounding the northern
+side of the basin, as well as increases in right-lateral sense of strain in some areas along the fault.

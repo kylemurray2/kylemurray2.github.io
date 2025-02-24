@@ -1,0 +1,11 @@
+Fig. 5. Year-to-year differences in subsidence behavior. (A) Time series at two
+representative points as a function of the day of year for each of the three years,
+beginning on the date of the first available SAR acquisition (November 8; day of
+year,−53). Locations of examples 1 and 4 are the same as in Fig. 3 and are shown
+in map view in (B) and (C). Cumulative difference of first and second years (B) and
+second and third years (C) at each pixel, averaged over shaded time period shown
+in (A). Map symbols are the same as in Fig. 1. Differences less than 2 cm are trans-
+parent. This analysis assumes no model (for example Eq. 1) to characterize the
+data but still illustrates the spatial and temporal variability in subsidence, indicat-
+ing that the effects that we observe are not just an artifact of the time period
+used in fitting Eq. 1.

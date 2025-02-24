@@ -1,0 +1,5 @@
+Figure 2. Statistics for all 672 sites in the study area. (a) Median Interannual
+Difference Adjusted for Skewness rate uncertainties with respect to the
+length of the time series. (b) Histogram of time series length. (c) Histogram
+of Global Positioning System rates of each component. (d) Histogram of rate
+uncertainties in each component.
