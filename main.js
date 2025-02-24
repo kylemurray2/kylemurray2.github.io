@@ -33,19 +33,37 @@ let rocketPack;
 let instructionText;  // Make instruction text globally accessible
 
 function preload() {
-    // Load character sprite
-    this.load.spritesheet('player', 
-        'https://labs.phaser.io/assets/sprites/dude.png',
-        { frameWidth: 32, frameHeight: 48 }
+    // Load robot character sprites with cropped height
+    this.load.spritesheet('player-idle', 
+        'robot/Destroyer/Idle.png',
+        { 
+            frameWidth: 127,     // Keep full width
+            frameHeight: 78,     // Half the height to crop top portion
+            margin: 0,           // Start from top of image
+            spacing: 0
+        }
+    );
+    
+    this.load.spritesheet('player-walk', 
+        'robot/Destroyer/Walk.png',
+        { 
+            frameWidth: 127,     // Keep full width
+            frameHeight: 78,     // Half the height to crop top portion
+            margin: 0,           // Start from top of image
+            spacing: 0
+        }
     );
 
     // Load platform assets
     this.load.image('ground', 'platform.png');
     this.load.image('background', 'https://labs.phaser.io/assets/skies/space3.png');
-    // Load rocket pack sprite
-    this.load.image('rocketpack', 'https://labs.phaser.io/assets/sprites/star.png');
-    // Load booster sprite for spaceship platforms
-    this.load.image('booster', 'https://labs.phaser.io/assets/sprites/rocket.png');
+    
+    // Make sure rocketpack loads first and remove the star sprite completely
+    this.load.image('rocketpack', 'rocketpack2.webp');
+    
+    // Remove or comment out the star sprite
+    // this.load.image('rocketpack', 'https://labs.phaser.io/assets/sprites/star.png');
+    
     // Load SAR satellite image
     this.load.image('sar', 'insar/sar_sat.webp');
     // Load flooding image
@@ -247,10 +265,19 @@ function create() {
         }
     });
 
-    // Create player first
-    player = this.physics.add.sprite(150, this.scale.height - 150, 'player');
+    // Create player with adjusted scale
+    player = this.physics.add.sprite(150, this.scale.height - 150, 'player-idle');
     player.setBounce(0.2);
-    player.setCollideWorldBounds(false);  // Allow player to leave screen bounds
+    player.setCollideWorldBounds(false);
+    player.setScale(0.85);  // Keep current scale
+    
+    // Adjust physics body to better align with platforms
+    player.body.setSize(80, 70);     // Increased height slightly
+    player.body.setOffset(24, 8);    // Moved hitbox up by adjusting Y offset
+
+    // Debug: Log sprite loading status
+    console.log('Idle texture exists:', this.textures.exists('player-idle'));
+    console.log('Walk texture exists:', this.textures.exists('player-walk'));
 
     // Create rocket pack slightly to the left of player's starting position
     rocketPack = this.physics.add.sprite(
@@ -258,32 +285,42 @@ function create() {
         50,  // Start at top of screen
         'rocketpack'
     );
-    rocketPack.setScale(0.25);  // Make rocket pack half as big
+    rocketPack.setScale(0.05);  // Make rocket pack half as big
     // Add physics properties to rocket pack
     rocketPack.setBounce(0.2);
     rocketPack.setCollideWorldBounds(true);
     // Add collision between rocket pack and platforms
     this.physics.add.collider(rocketPack, platforms);
 
-    // Player animations
+    // Player animations with correct frame counts
     this.anims.create({
         key: 'left',
-        frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }),
+        frames: this.anims.generateFrameNumbers('player-walk', { start: 0, end: 4 }), // 5 frames
         frameRate: 10,
         repeat: -1
     });
 
     this.anims.create({
         key: 'turn',
-        frames: [{ key: 'player', frame: 4 }],
-        frameRate: 20
+        frames: this.anims.generateFrameNumbers('player-idle', { start: 0, end: 4 }), // 5 frames
+        frameRate: 10,
+        repeat: -1
     });
 
     this.anims.create({
         key: 'right',
-        frames: this.anims.generateFrameNumbers('player', { start: 5, end: 8 }),
+        frames: this.anims.generateFrameNumbers('player-walk', { start: 0, end: 4 }), // 5 frames
         frameRate: 10,
         repeat: -1
+    });
+
+    // Add this to handle sprite flipping
+    player.on('animationupdate', function() {
+        if (cursors.left.isDown) {
+            player.setFlipX(true);
+        } else if (cursors.right.isDown) {
+            player.setFlipX(false);
+        }
     });
 
     // Add collision detection
@@ -314,6 +351,7 @@ function create() {
             hasRocketPack = true;
             jumpVelocity = -350;
             rocket.destroy();
+            player.setTint(0xffff00);  // Turn player golden immediately
             instructionText.setText('Rocket pack acquired! Use arrow keys to move, UP to jump higher, and SPACE to enter research zones');
         }
     }
