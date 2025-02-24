@@ -81,11 +81,15 @@ p, div, span, a {
     padding: 20px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1400px; /* Optional: add width constraint */
+    margin: 0 auto; /* Center the container */
 }
 
 .slider {
     position: relative;
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .slide {
@@ -99,6 +103,8 @@ p, div, span, a {
 
 .slide img {
     width: 100%;
+    max-height: 600px; /* Reduced from 1000px to fit standard laptop screens */
+    object-fit: contain; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
