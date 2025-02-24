@@ -322,7 +322,7 @@ function create() {
         -100,  // Start above the screen to let it fall
         'rocketpack'
     );
-    rocketPack.setScale(0.05);
+    rocketPack.setScale(0.035);
     rocketPack.setBounce(0.05);
     rocketPack.setCollideWorldBounds(false);
     
