@@ -1,6 +1,1 @@
-Figure 4. Displacement time series within the Whitewater River Basin and contour map. (a) line-of-sight (LOS)
-observations from each track are plotted in the time series (location indicated by yellow star in map) with the track
-P166 data filtered time series plotted (orange dashed line). (b) Timing of uplift, with contours indicating the region
-where the filtered LOS displacement (from Sentinel-1a/b track P166) exceeds 5 cm (indicated by dashed gray line in
-time series in [a]) on each date (colors). Faults from the Southern California Earthquake Center (SCEC) Community
-Fault Model are shown as white lines.
+Figure 4. Displacement time series within the Whitewater River Basin and contour map. (a) line-of-sight (LOS) observations from each track are plotted in the time series (location indicated by yellow star in map) with the track P166 data filtered time series plotted (orange dashed line). (b) Timing of uplift, with contours indicating the region where the filtered LOS displacement (from Sentinel-1a/b track P166) exceeds 5 cm (indicated by dashed gray line in time series in [a]) on each date (colors). Faults from the Southern California Earthquake Center (SCEC) Community Fault Model are shown as white lines.

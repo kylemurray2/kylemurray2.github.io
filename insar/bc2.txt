@@ -1,5 +1,1 @@
-Fig. 3. Elevation dependence in central US (A) Phase variation along white
-pro le line (C) connecting a string of GPS sites (red triangles). (B) Elevation
-variation along pro le shown in D. (C) Interferogram (color, 07/17/2016–07/
-29/2016) and available GPS sites (red triangles). (D) Elevation (color) from
-SRTM-DEM (Farr et al., 2007).
+Fig. 3. Elevation dependence in central US (A) Phase variation along white pro le line (C) connecting a string of GPS sites (red triangles). (B) Elevation variation along pro le shown in D. (C) Interferogram (color, 07/17/2016–07/ 29/2016) and available GPS sites (red triangles). (D) Elevation (color) from SRTM-DEM (Farr et al., 2007).

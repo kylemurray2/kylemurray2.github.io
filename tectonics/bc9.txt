@@ -1,3 +1,1 @@
-Fig. 9. Average LOS rates related to groundwater extraction in and around Nairobi, Kenya. Each contour represents ~33 mm/yr of LOS change. The GNSS station
-RCMN is shown as a white triangle on the map and projected to the InSAR LOS for comparison in the inset time series. Colors in time series (inset) correspond to
-numbers 1–5 labeled in map. Map extent shown in Fig. 2.
+Fig. 9. Average LOS rates related to groundwater extraction in and around Nairobi, Kenya. Each contour represents ~33 mm/yr of LOS change. The GNSS station RCMN is shown as a white triangle on the map and projected to the InSAR LOS for comparison in the inset time series. Colors in time series (inset) correspond to numbers 1–5 labeled in map. Map extent shown in Fig. 2.

@@ -1,12 +1,1 @@
-The Tulare Basin in Central California is a site of intensive agricultural activity and extraction of groundwater,
-under a Creative
-with pronounced ground subsidence and degradation of water resources over the past century. Spatially extensive
-Commons Attribution
-observations of ground displacements from satellite-based remote sensing allow us to infer the response of the
-NonCommercial
-aquifer system to changes in usage and to marked recharge events such as the heavy winter rainfall in 2017. Radar
-License 4.0 (CC BY-NC).
-imagery from the Sentinel-1a/b satellites (November 2014 to October 2017) illuminates secular and seasonal
-trends modulated by changes in withdrawal rates and the magnitude of winter precipitation. Despite the increased
-precipitation in early 2017 that led to a marked decrease, or in some areas, reversal, of subsidence rates, subsidence
-returned to rates observed during the drought within a matter of months.
+The Tulare Basin in Central California is a site of intensive agricultural activity and extraction of groundwater, under a Creative with pronounced ground subsidence and degradation of water resources over the past century. Spatially extensive Commons Attribution observations of ground displacements from satellite-based remote sensing allow us to infer the response of the NonCommercial aquifer system to changes in usage and to marked recharge events such as the heavy winter rainfall in 2017. Radar License 4.0 (CC BY-NC). imagery from the Sentinel-1a/b satellites (November 2014 to October 2017) illuminates secular and seasonal trends modulated by changes in withdrawal rates and the magnitude of winter precipitation. Despite the increased precipitation in early 2017 that led to a marked decrease, or in some areas, reversal, of subsidence rates, subsidence returned to rates observed during the drought within a matter of months.

@@ -1,17 +1,1 @@
-The East African Rift System (EARS) is an active continental rift zone that hosts a diverse range of processes that
-result in recent and ongoing crustal deformation. To analyze these processes, we used Sentinel-1 Interferometric
-Synthetic Aperture Radar (InSAR) to complement the sparse GNSS velocity field with high resolution measurements
-of line-of-sight (LOS) deformation between 2015 and 2022. A broad survey approach was employed to
-detect new signals within the central section of the EARS, and to establish a baseline for future studies focused on
-tectonic, volcanic, and/or hydrologic deformation and change spanning geodetic time scales. With this regional
-approach, we were able to resolve signals varying over time-spans of a few weeks to several years that have
-magnitudes greater than ~1 cm/yr. Our resulting deformation field shows a diverse range of signals related to
-the processes listed above as well as other unknown sources. This includes up to 8.5 cm/yr of groundwater-
-related subsidence in Nairobi, up to 70 cm of LOS displacement during the eruption of Nyiragongo in 2021,
-and steady uplift in the Manyara basin with a rate of 2.8 cm/yr. We update previously published InSAR measurements
-of Mount Suswa volcano, and the geothermal fields in Olkaria. We also show LOS change ranging
-between 2 and 5 mm/yr over a distances of approximately 200 km spanning the Kenya Rift with the greatest
-differential rates occurring south of Lake Turkana. More generally, our results highlight the ambiguity of relying
-solely on the sparse network of GNSS for studies such as those characterizing tectonic motion and rift opening.
-Such studies are likely missing many important signals and/or includes sites that are contaminated with signals
-unrelated to the target process.
+The East African Rift System (EARS) is an active continental rift zone that hosts a diverse range of processes that result in recent and ongoing crustal deformation. To analyze these processes, we used Sentinel-1 Interferometric Synthetic Aperture Radar (InSAR) to complement the sparse GNSS velocity field with high resolution measurements of line-of-sight (LOS) deformation between 2015 and 2022. A broad survey approach was employed to detect new signals within the central section of the EARS, and to establish a baseline for future studies focused on tectonic, volcanic, and/or hydrologic deformation and change spanning geodetic time scales. With this regional approach, we were able to resolve signals varying over time-spans of a few weeks to several years that have magnitudes greater than ~1 cm/yr. Our resulting deformation field shows a diverse range of signals related to the processes listed above as well as other unknown sources. This includes up to 8.5 cm/yr of groundwater- related subsidence in Nairobi, up to 70 cm of LOS displacement during the eruption of Nyiragongo in 2021, and steady uplift in the Manyara basin with a rate of 2.8 cm/yr. We update previously published InSAR measurements of Mount Suswa volcano, and the geothermal fields in Olkaria. We also show LOS change ranging between 2 and 5 mm/yr over a distances of approximately 200 km spanning the Kenya Rift with the greatest differential rates occurring south of Lake Turkana. More generally, our results highlight the ambiguity of relying solely on the sparse network of GNSS for studies such as those characterizing tectonic motion and rift opening. Such studies are likely missing many important signals and/or includes sites that are contaminated with signals unrelated to the target process.

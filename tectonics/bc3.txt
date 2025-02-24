@@ -1,10 +1,1 @@
-Fig. 3. Profile across the Lake Turkana Depression including Lake Turkana
-(blue) connecting GNSS stations (King et al., 2019; Knappe et al., 2020). (A)
-Map showing LOS displacement rates with the GNSS velocity vectors (gray) and
-profile line (red). Extent of map (A) is shown in Fig. 2. (B) Profile with only the
-eastward component of the GNSS velocities. (C) GNSS velocities from the
-profile projected to the InSAR LOS, along with the InSAR LOS rate profile (black
-line). GNSS uncertainties were computed using the MIDAS method which
-computes a realistic velocity uncertainty that is based on the observed distribution
-of sampled slopes (Blewitt et al., 2016). Station XHOR is located at an
-oasis fed by springs along the margin of a Mesozoic rift system.
+Fig. 3. Profile across the Lake Turkana Depression including Lake Turkana (blue) connecting GNSS stations (King et al., 2019; Knappe et al., 2020). (A) Map showing LOS displacement rates with the GNSS velocity vectors (gray) and profile line (red). Extent of map (A) is shown in Fig. 2. (B) Profile with only the eastward component of the GNSS velocities. (C) GNSS velocities from the profile projected to the InSAR LOS, along with the InSAR LOS rate profile (black line). GNSS uncertainties were computed using the MIDAS method which computes a realistic velocity uncertainty that is based on the observed distribution of sampled slopes (Blewitt et al., 2016). Station XHOR is located at an oasis fed by springs along the margin of a Mesozoic rift system.

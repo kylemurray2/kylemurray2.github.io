@@ -1,7 +1,1 @@
-Figure 5. Horizontal Global Positioning System velocities projected onto five profiles (see Figure 3) as a function of long-
-itude. Each profile shows stations within 90 km of the line. Approximate boundaries of the Colorado Plateau (CP) and
-Rio Grande Rift (RGR) are indicated by blue and red dashed lines, respectively. Boundary of RGR is defined by basin‐
-bounding faults to the east and basin borders to the west (Figure 3). CP boundaries are defined by the longitude where the
-profile crosses the CP border (Figure 3). WFMF denotes Williams Fork Mountain Fault. Red triangle shows the
-approximate location of the Socorro Magma Body (SMB) on profile 4. East‐west strain rates east of the Basin and Range
-province and into the Great Plains are estimated in each profile; 1 nε/year is equal to one part per billion (109) per year.
+Figure 5. Horizontal Global Positioning System velocities projected onto five profiles (see Figure 3) as a function of long- itude. Each profile shows stations within 90 km of the line. Approximate boundaries of the Colorado Plateau (CP) and Rio Grande Rift (RGR) are indicated by blue and red dashed lines, respectively. Boundary of RGR is defined by basin‐ bounding faults to the east and basin borders to the west (Figure 3). CP boundaries are defined by the longitude where the profile crosses the CP border (Figure 3). WFMF denotes Williams Fork Mountain Fault. Red triangle shows the approximate location of the Socorro Magma Body (SMB) on profile 4. East‐west strain rates east of the Basin and Range province and into the Great Plains are estimated in each profile; 1 nε/year is equal to one part per billion (109) per year.

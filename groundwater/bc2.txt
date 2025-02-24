@@ -1,3 +1,1 @@
-Figure 2. Groundwater elevation (black line) at United States Geological Survey (USGS) well 03S04E20F01S (https://
-waterdata.usgs.gov/nwis/gw) and yearly total water delivered to the Whitewater groundwater replenishment facility
-(Coachella Valley Water District, C. V. W., 2019). The location of the well is shown in Figure 3a.
+Figure 2. Groundwater elevation (black line) at United States Geological Survey (USGS) well 03S04E20F01S (https:// waterdata.usgs.gov/nwis/gw) and yearly total water delivered to the Whitewater groundwater replenishment facility (Coachella Valley Water District, C. V. W., 2019). The location of the well is shown in Figure 3a.

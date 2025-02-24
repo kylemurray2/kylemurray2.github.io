@@ -1,4 +1,1 @@
-Fig. 4. Elevation dependence in Mexico. (A) Phase variation along white pro le
-line from (C). (B) Elevation variation along white pro le line from (D). (C)
-Interferogram (color, 4/15/2016–5/9/2016). (D) Elevation (color) from SRTM-
-DEM (Farr et al., 2007). 
+Fig. 4. Elevation dependence in Mexico. (A) Phase variation along white pro le line from (C). (B) Elevation variation along white pro le line from (D). (C) Interferogram (color, 4/15/2016–5/9/2016). (D) Elevation (color) from SRTM- DEM (Farr et al., 2007).

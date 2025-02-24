@@ -1,6 +1,1 @@
-Figure 8. RMS error (computed from 1,000 realizations at each noise
-level) of the inferred north-south velocities from the undamped, damped,
-and coupled synthetic test cases taken from the location of peak velocity.
-The dashed 4 cm/yr line indicates the actual peak value of the input
-Y-velocity, indicating that most of the error in the damped solution comes
-from the over-damping toward zero.
+Figure 8. RMS error (computed from 1,000 realizations at each noise level) of the inferred north-south velocities from the undamped, damped, and coupled synthetic test cases taken from the location of peak velocity. The dashed 4 cm/yr line indicates the actual peak value of the input Y-velocity, indicating that most of the error in the damped solution comes from the over-damping toward zero.

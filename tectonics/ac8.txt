@@ -1,7 +1,1 @@
-Figure 8. Euler pole results from the inversion of all sites within the physiographic boundaries of the Colorado Plateau
-(CP). (a) Schematic map of CP rotation with a sample of Euler pole locations (gray dots) defining a 95% confidence
-region resulting from Monte Carlo simulations. Red circle indicates the optimal Euler pole location. (b) Black vectors
-represent measured velocities with 95% confidence ellipses at each station, and blue vectors are calculated velocities using
-the optimal Euler parameters. (c) Residual vectors (observations subtracted from vectors derived from forward model)
-showing internal deformation within the CP. (a–c) CP outlined in blue, Neogene volcanics in orange, and RGR basins in
-dark gray.
+Figure 8. Euler pole results from the inversion of all sites within the physiographic boundaries of the Colorado Plateau (CP). (a) Schematic map of CP rotation with a sample of Euler pole locations (gray dots) defining a 95% confidence region resulting from Monte Carlo simulations. Red circle indicates the optimal Euler pole location. (b) Black vectors represent measured velocities with 95% confidence ellipses at each station, and blue vectors are calculated velocities using the optimal Euler parameters. (c) Residual vectors (observations subtracted from vectors derived from forward model) showing internal deformation within the CP. (a–c) CP outlined in blue, Neogene volcanics in orange, and RGR basins in dark gray.

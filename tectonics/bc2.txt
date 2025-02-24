@@ -1,3 +1,1 @@
-Fig. 2. Ascending Sentinel-1 Line-of-sight (LOS) rate map in Nubia-fixed reference frame. Negative values (blue) represent relative motion away from the satellite
-(subsidence and/or eastward motion), while positive values (red) represent motion toward the satellite (uplift and/or westward). Major Quaternary faults in black
-(Ebinger et al., 2024). Lake Turkana outlined in white for clarity.
+Fig. 2. Ascending Sentinel-1 Line-of-sight (LOS) rate map in Nubia-fixed reference frame. Negative values (blue) represent relative motion away from the satellite (subsidence and/or eastward motion), while positive values (red) represent motion toward the satellite (uplift and/or westward). Major Quaternary faults in black (Ebinger et al., 2024). Lake Turkana outlined in white for clarity.

@@ -1,4 +1,1 @@
-Figure 11. Average velocities in 2017 from coupled inversion, including
-vertical (gray-scale saturated at 6 cm/yr), and horizontal velocities (black
-vectors) derived from the coupled solution. Colored lines show location of
-profiles shown in Figure 12.
+Figure 11. Average velocities in 2017 from coupled inversion, including vertical (gray-scale saturated at 6 cm/yr), and horizontal velocities (black vectors) derived from the coupled solution. Colored lines show location of profiles shown in Figure 12.

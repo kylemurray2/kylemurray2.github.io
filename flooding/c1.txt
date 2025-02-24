@@ -1,5 +1,1 @@
-Figure 1. Map showing land elevation below 5 meters along the south shore of O‘ahu derived from Lidar data (Section 4.2).
-Inset map (a) shows extent of elevation map. GNSS stations indicated by red triangles on map. Time series for GNSS site
-(HNLC) (b) with long-term average linear trend (red line). Tide gauge location shown as white circle in map (station ID
-1612340). (c) Time series of sea levels since 1905 with yearly moving average (blue line) and long-term average linear trend
-(red).
+Figure 1. Map showing land elevation below 5 meters along the south shore of O‘ahu derived from Lidar data (Section 4.2). Inset map (a) shows extent of elevation map. GNSS stations indicated by red triangles on map. Time series for GNSS site (HNLC) (b) with long-term average linear trend (red line). Tide gauge location shown as white circle in map (station ID 1612340). (c) Time series of sea levels since 1905 with yearly moving average (blue line) and long-term average linear trend (red).

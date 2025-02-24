@@ -1,6 +1,1 @@
-Figure 1. Extent of study area. Colored boxes represent the extent of the four Sentinel-1a/b swaths and Uninhabited
-Aerial Vehicle Synthetic Aperture Radar (UAVSAR) data (white box) used in this study. The Whitewater groundwater
-replenishment facility percolation grounds are roughly highlighted with a small red triangle. Faults from the Southern
-California Earthquake Center (SCEC) Community Fault Model are shown as black lines. Palm Springs blind fault and
-Garnet Hill fault are indicated with bold black lines. Long arrows indicate satellite flight direction and shorter arrows
-indicate the look direction.
+Figure 1. Extent of study area. Colored boxes represent the extent of the four Sentinel-1a/b swaths and Uninhabited Aerial Vehicle Synthetic Aperture Radar (UAVSAR) data (white box) used in this study. The Whitewater groundwater replenishment facility percolation grounds are roughly highlighted with a small red triangle. Faults from the Southern California Earthquake Center (SCEC) Community Fault Model are shown as black lines. Palm Springs blind fault and Garnet Hill fault are indicated with bold black lines. Long arrows indicate satellite flight direction and shorter arrows indicate the look direction.

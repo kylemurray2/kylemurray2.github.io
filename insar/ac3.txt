@@ -1,2 +1,1 @@
-Fig. 3. (a) Elevation map from SRTM-30 DEM, (b) six clusters from Fig. 2(b) and (c) (the same colors) shown in map view for ascending interferogram
-June 8, 2015–July 2, 2015, and (c) slopes and (d) y-intercepts of the best-fit linear relationship between elevation and phase for each cluster
+Fig. 3. (a) Elevation map from SRTM-30 DEM, (b) six clusters from Fig. 2(b) and (c) (the same colors) shown in map view for ascending interferogram June 8, 2015–July 2, 2015, and (c) slopes and (d) y-intercepts of the best-fit linear relationship between elevation and phase for each cluster

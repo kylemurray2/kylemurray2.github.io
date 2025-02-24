@@ -1,3 +1,1 @@
-Fig. 6. Mexico example: Interferogram (left) for date pair 3/5/2017–3/17/17, modeled tropospheric delays using various independent datasets for that inter-
-ferogram (1st row), and corrected interferogram for each correction type (2nd row). Column headings are grouped by weather models (red), phase-elevation
-dependence (yellow), and precipitable water vapor data (green).
+Fig. 6. Mexico example: Interferogram (left) for date pair 3/5/2017–3/17/17, modeled tropospheric delays using various independent datasets for that inter- ferogram (1st row), and corrected interferogram for each correction type (2nd row). Column headings are grouped by weather models (red), phase-elevation dependence (yellow), and precipitable water vapor data (green).

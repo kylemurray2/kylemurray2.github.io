@@ -1,7 +1,1 @@
-Fig. 1. Overview of the study area covering both the central US and south
-central Mexico. We use 61 and 41 acquisitions from the central US and Mexico,
-respectively from Sentinel-1 satellite (red boxes) acquired between March 2015
-and February 2018. Dashed vector shows satellite ight direction with ortho-
-gonal line-of-site (LOS) vector for both areas. (For interpretation of the refer-
-ences to color in this gure legend, the reader is referred to the web version of
-this article.)
+Fig. 1. Overview of the study area covering both the central US and south central Mexico. We use 61 and 41 acquisitions from the central US and Mexico, respectively from Sentinel-1 satellite (red boxes) acquired between March 2015 and February 2018. Dashed vector shows satellite ight direction with ortho- gonal line-of-site (LOS) vector for both areas. (For interpretation of the refer- ences to color in this gure legend, the reader is referred to the web version of this article.)

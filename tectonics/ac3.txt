@@ -1,9 +1,1 @@
-Figure 3. (a) Horizontal rates with 90% confidence error ellipses. East‐west
-dashed lines labeled 1–5 are profiles shown in Figures 5 and 6. Vectors in red
-have been omitted from the analysis. (b) Vertical rates are shown in color
-scale (blue is subsidence, and red is uplift). The size of circles represents the
-vertical rate uncertainty (larger circles have lower uncertainty). Sites that
-were omitted from the analysis are also shown. (a and b) Colorado Plateau
-(CP) is outlined in blue, major Quaternary faults shown as red lines, late
-Neogene volcanics (Jemez lineament) shown in orange, and RGR basins
-shown in dark gray. SMB denotes location of the Socorro Magma Body.
+Figure 3. (a) Horizontal rates with 90% confidence error ellipses. East‐west dashed lines labeled 1–5 are profiles shown in Figures 5 and 6. Vectors in red have been omitted from the analysis. (b) Vertical rates are shown in color scale (blue is subsidence, and red is uplift). The size of circles represents the vertical rate uncertainty (larger circles have lower uncertainty). Sites that were omitted from the analysis are also shown. (a and b) Colorado Plateau (CP) is outlined in blue, major Quaternary faults shown as red lines, late Neogene volcanics (Jemez lineament) shown in orange, and RGR basins shown in dark gray. SMB denotes location of the Socorro Magma Body.
