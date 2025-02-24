@@ -78,6 +78,10 @@ function preload() {
 }
 
 function create() {
+    // Add debug flag to force mobile mode
+    const forceMobile = false;  // Set to true to test mobile controls
+    const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
     // Add background
     background = this.add.image(this.scale.width / 2, this.scale.height / 2, 'background');
     background.setOrigin(0.5);
@@ -444,44 +448,147 @@ function create() {
             platform.setAlpha(0.8);
         }
     });
+
+    // Add copyright text in bottom left
+    const copyrightText = this.add.text(10, this.scale.height - 30, 
+        '© 2025 Kyle Murray', 
+        {
+            fontSize: '10px',
+            fill: '#fff',
+            stroke: '#000',
+            strokeThickness: 2
+        }
+    );
+    copyrightText.setScrollFactor(0);  // Fix to screen
+    copyrightText.setDepth(10);        // Make sure it's above other elements
+
+    if (isMobile) {
+        // Create mobile controls
+        const controlsConfig = {
+            jump: {
+                x: 50,                    // Move jump to left side
+                y: this.scale.height - 60,
+                text: '↑'
+            },
+            left: {
+                x: this.scale.width - 180,  // Move arrows to right side
+                y: this.scale.height - 60,
+                text: '←'
+            },
+            right: {
+                x: this.scale.width - 80,   // Position right arrow next to left arrow
+                y: this.scale.height - 60,
+                text: '→'
+            },
+            action: {
+                x: 150,                     // Move action button next to jump
+                y: this.scale.height - 60,
+                text: '⚡'
+            }
+        };
+
+        // Create touch buttons
+        this.mobileControls = {};
+        Object.entries(controlsConfig).forEach(([key, config]) => {
+            const button = this.add.text(config.x, config.y, config.text, {
+                fontSize: '40px',
+                backgroundColor: '#00000088',
+                padding: { x: 20, y: 10 },
+                fill: '#ffffff'
+            });
+            button.setScrollFactor(0);
+            button.setInteractive();
+            button.setDepth(100);
+            button.alpha = 0.7;
+
+            // Add touch handlers
+            button.on('pointerdown', () => button.isPressed = true);
+            button.on('pointerup', () => button.isPressed = false);
+            button.on('pointerout', () => button.isPressed = false);
+
+            this.mobileControls[key] = button;
+        });
+
+        // Modify instruction text for mobile - split into two lines
+        instructionText.setText('Use arrow buttons to move and jump.\nFind the rocket pack to jump higher!');
+        instructionText.setFontSize('14px');
+        instructionText.setLineSpacing(10);  // Add space between lines
+    }
 }
 
 function update() {
-    // Handle movement
-    if (cursors.left.isDown) {
-        player.setVelocityX(-200);
-        player.anims.play('left', true);
-    } else if (cursors.right.isDown) {
-        player.setVelocityX(200);
-        player.anims.play('right', true);
-    } else {
-        player.setVelocityX(0);
-        player.anims.play('turn');
-    }
-
-    // Handle jumping with visual effect
-    if (cursors.up.isDown && player.body.touching.down) {
-        player.setVelocityY(jumpVelocity);
-        if (hasRocketPack) {
-            player.setTint(0xffff00);
+    // Use same debug flag
+    const forceMobile = false;  // Set to true to test mobile controls
+    const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // Mobile controls
+        if (this.mobileControls.left.isPressed) {
+            player.setVelocityX(-200);
+            player.anims.play('left', true);
+        } else if (this.mobileControls.right.isPressed) {
+            player.setVelocityX(200);
+            player.anims.play('right', true);
         } else {
-            player.clearTint();
+            player.setVelocityX(0);
+            player.anims.play('turn');
         }
-    }
 
-    // If the player falls below the screen, redirect to a "death" page with a meme.
-    if (player.y > this.scale.height * 2) {  // Let them fall twice the screen height
-        window.location.href = "death.html";
-    }
-
-    // Update platform previous positions and move rocketpack
-    platforms.children.iterate(function (platform) {
-        if (platform && platform.isMoving) {
-            if (rocketPack && rocketPack.movingPlatform === platform) {
-                const platformDeltaX = platform.x - platform.prevX;
-                rocketPack.x += platformDeltaX;
+        // Handle jumping
+        if (this.mobileControls.jump.isPressed && player.body.touching.down) {
+            player.setVelocityY(jumpVelocity);
+            if (hasRocketPack) {
+                player.setTint(0xffff00);
             }
-            platform.prevX = platform.x;
         }
-    });
+
+        // Handle action button (space equivalent)
+        if (this.mobileControls.action.isPressed && player.body.touching.down) {
+            platforms.children.iterate((platform) => {
+                if (platform && platform.zoneName && 
+                    Phaser.Geom.Intersects.RectangleToRectangle(player.getBounds(), platform.getBounds())) {
+                    localStorage.setItem('lastPlatform', platform.zoneName);
+                    window.location.href = platform.page;
+                }
+            });
+        }
+    } else {
+        // Existing desktop controls
+        if (cursors.left.isDown) {
+            player.setVelocityX(-200);
+            player.anims.play('left', true);
+        } else if (cursors.right.isDown) {
+            player.setVelocityX(200);
+            player.anims.play('right', true);
+        } else {
+            player.setVelocityX(0);
+            player.anims.play('turn');
+        }
+
+        // Handle jumping with visual effect
+        if (cursors.up.isDown && player.body.touching.down) {
+            player.setVelocityY(jumpVelocity);
+            if (hasRocketPack) {
+                player.setTint(0xffff00);
+            } else {
+                player.clearTint();
+            }
+        }
+
+        // If the player falls below the screen, redirect to a "death" page with a meme.
+        if (player.y > this.scale.height * 2) {  // Let them fall twice the screen height
+            window.location.href = "death.html";
+        }
+
+        // Update platform previous positions and move rocketpack
+        platforms.children.iterate(function (platform) {
+            if (platform && platform.isMoving) {
+                if (rocketPack && rocketPack.movingPlatform === platform) {
+                    const platformDeltaX = platform.x - platform.prevX;
+                    rocketPack.x += platformDeltaX;
+                }
+                platform.prevX = platform.x;
+            }
+        });
+    }
 }
