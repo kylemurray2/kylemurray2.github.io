@@ -33,6 +33,9 @@ let rocketPack;
 let instructionText;  // Make instruction text globally accessible
 
 function preload() {
+    // Load bio text
+    this.load.text('bioText', 'bio.txt');
+
     // Load robot character sprites with cropped height
     this.load.spritesheet('player-idle', 
         'robot/Destroyer/Idle.png',
@@ -95,14 +98,14 @@ function create() {
     const panelWidth = this.scale.width * 0.22; // 20% of screen width
     const panelPadding = 20;
     
-    // Add the description text
-    const descriptionText = "Dr. Kyle Murray received his PhD in 2020 in geophysics from Cornell University's Earth and Atmospheric Sciences department. Upon completing an NSF postdoctoral fellowship, he continues his research at the University of Hawaii, where he works with the Climate Resilience Collaborative (CRC) in the Earth Sciences department and the Sea Level Center in the Oceanography department. His research focus is on developing data-driven methods to accurately measure and map the Earth's active deformation in both space and time. To learn more about his past and current projects, please explore the research map.";
+    // Get the description text from loaded bio.txt file
+    const descriptionText = this.cache.text.get('bioText');
     
     const description = this.add.text(panelPadding * 2, panelPadding * 2, descriptionText, {
         fontSize: '16px',
         fill: '#fff',
-        stroke: '#000',  // Add black outline to text
-        strokeThickness: 2,  // Make text more readable against space background
+        stroke: '#000',
+        strokeThickness: 2,
         wordWrap: { width: panelWidth - (panelPadding * 3) },
         lineSpacing: 10
     });
@@ -142,27 +145,46 @@ function create() {
     // Create segmented ground platforms with gaps
     const segments = [
         { x: 150, width: 0.3 },    // Left segment - starting platform
-        { x: 500, width: 0.3 },    // Middle segment - bigger gap
-        { x: 900, width: 0.3 }     // Right segment - bigger gap
+        { x: -100, width: 0.3, y: groundY - 50 },    // Middle segment - raised up
+        { x: 925, width: 0.3, y: groundY + 150 }     // Right segment - lowered
     ];
     
-    segments.forEach(segment => {
-        const platform = platforms.create(segment.x, groundY, 'ground');
-        platform.setScale(segment.width, 0.1);  // Reduce vertical scale to 0.1 for thinner platforms
+    segments.forEach((segment, index) => {
+        const platform = platforms.create(segment.x, segment.y || groundY, 'ground');
+        platform.setScale(segment.width, 0.1);
         platform.refreshBody();
         
-        // Store original y position
-        platform.startY = groundY;
+        // Store original positions
+        platform.startY = segment.y || groundY;
+        platform.startX = segment.x;
         
-        // Add floating animation with random timing
+        if (index === 2) {  // Third segment (index 2)
+            platform.isMoving = true;
+            platform.startX = platform.x;  // Store initial position
+            
+            // Add horizontal movement
+            this.tweens.add({
+                targets: platform,
+                x: platform.x - 300,
+                duration: 6000,
+                yoyo: true,
+                repeat: -1,
+                ease: 'Sine.easeInOut',
+                onUpdate: function() {
+                    platform.refreshBody();
+                }
+            });
+        }
+        
+        // Vertical floating animation (existing)
         this.tweens.add({
             targets: platform,
-            y: groundY - 5,
-            duration: 1500 + Math.random() * 1000, // Random duration between 1.5-2.5s
+            y: platform.startY - 5,
+            duration: 1500 + Math.random() * 1000,
             yoyo: true,
             repeat: -1,
             ease: 'Sine.easeInOut',
-            delay: Math.random() * 1000, // Random start delay
+            delay: Math.random() * 1000,
             onUpdate: function() {
                 platform.refreshBody();
             }
@@ -174,19 +196,25 @@ function create() {
     const platformHeight = 30;
     const jumpHeight = 130;    // Vertical distance between platforms
     const jumpDistance = 300;  // Horizontal distance between platforms
-
+    const x_offset = 1200;
     // Create research zone platforms
     const zoneData = [
-        { x: 100, y: groundY - jumpHeight, name: 'InSAR\nmethodology', page: 'insar/insar.html' },
-        { x: 100 + jumpDistance, y: groundY - jumpHeight * 1.8, name: 'Coastal\nflooding', page: 'flooding/flooding.html' },
-        { x: 100, y: groundY - jumpHeight * 2.6, name: 'Groundwater\nsubsidence', page: 'groundwater/groundwater.html' },
-        { x: 100 + jumpDistance, y: groundY - jumpHeight * 3.4, name: 'Tectonics', page: 'tectonics/tectonics.html' }
+        { x: x_offset + 100, y: groundY , name: 'InSAR\nmethodology', page: 'insar/insar.html' },
+        { x: x_offset + 500, y: groundY - 100, name: 'Coastal\nflooding', page: 'flooding/flooding.html' },
+        { x: x_offset + 900, y: groundY - 200, name: 'Groundwater\nsubsidence', page: 'groundwater/groundwater.html' },
+        { x: x_offset + 1300, y: groundY - 300, name: 'Tectonics', page: 'tectonics/tectonics.html' },
+        { 
+            x: 100 - jumpDistance,  // Position it to the left of first platform
+            y: groundY + 200,  // Position it between ground and first platform
+            name: 'Original\nwebsite',
+            page: 'original_site/index.html'
+        }
     ];
 
     zoneData.forEach(zone => {
         // Create platform
         const platform = platforms.create(zone.x, zone.y, 'ground');
-        platform.setScale(platformWidth / platform.width, platformHeight / platform.height);
+        platform.setScale(platformWidth / platform.width, platformHeight / platform.height);  // Set both width and height scale
         platform.refreshBody();
         platform.zoneName = zone.name;
         platform.page = zone.page;
@@ -196,7 +224,7 @@ function create() {
         platform.startY = zone.y;
 
         // Create text above platform
-        const text = this.add.text(zone.x, zone.y - 30, zone.name, {
+        const text = this.add.text(zone.x, zone.y - 50, zone.name, {
             fontSize: '16px',
             fill: '#fff',
             backgroundColor: '#000000aa',
@@ -232,36 +260,38 @@ function create() {
             onUpdate: function() {
                 platform.refreshBody();
                 // Update text position to follow platform
-                text.y = platform.y - 30;
+                text.y = platform.y - 50;
             }
         });
 
-        // Add SAR image for InSAR methodology platform
+        // Add images centered above text
+        const imageOffset = 150;
         if (zone.name === 'InSAR\nmethodology') {
-            const sarImage = this.add.image(zone.x - 100, zone.y - 80, 'sar');
+            const sarImage = this.add.image(zone.x, zone.y - imageOffset, 'sar');  // Centered above text
             sarImage.setScale(0.16);
-            sarImage.setDepth(0);  // Set images to lowest depth
+            sarImage.setDepth(0);
+            sarImage.setOrigin(0.5);  // Center the image
         }
         
-        // Add flooding image for coastal flooding platform
         if (zone.name === 'Coastal\nflooding') {
-            const floodImage = this.add.image(zone.x + 100, zone.y - 80, 'flooding');
+            const floodImage = this.add.image(zone.x, zone.y - imageOffset, 'flooding');
             floodImage.setScale(0.16);
-            floodImage.setDepth(0);  // Set images to lowest depth
+            floodImage.setDepth(0);
+            floodImage.setOrigin(0.5);
         }
 
-        // Add groundwater image for groundwater subsidence platform
         if (zone.name === 'Groundwater\nsubsidence') {
-            const groundwaterImage = this.add.image(zone.x - 100, zone.y - 80, 'groundwater');
+            const groundwaterImage = this.add.image(zone.x, zone.y - imageOffset, 'groundwater');
             groundwaterImage.setScale(0.16);
             groundwaterImage.setDepth(0);
+            groundwaterImage.setOrigin(0.5);
         }
 
-        // Add tectonics image for tectonics platform
         if (zone.name === 'Tectonics') {
-            const tectonicsImage = this.add.image(zone.x + 100, zone.y - 80, 'tectonics');
+            const tectonicsImage = this.add.image(zone.x, zone.y - imageOffset, 'tectonics');
             tectonicsImage.setScale(0.16);
             tectonicsImage.setDepth(0);
+            tectonicsImage.setOrigin(0.5);
         }
     });
 
@@ -279,18 +309,66 @@ function create() {
     console.log('Idle texture exists:', this.textures.exists('player-idle'));
     console.log('Walk texture exists:', this.textures.exists('player-walk'));
 
-    // Create rocket pack slightly to the left of player's starting position
+    // Extend world bounds downward to allow falling to lower platform
+    this.physics.world.setBounds(0, 0, this.scale.width, this.scale.height * 2);
+    
+    // Create rocket pack above the lowered right segment
     rocketPack = this.physics.add.sprite(
-        player.x + 800,  // Left of player
-        50,  // Start at top of screen
+        -100,  // Match x position with right segment
+        -100,  // Start above the screen to let it fall
         'rocketpack'
     );
-    rocketPack.setScale(0.05);  // Make rocket pack half as big
-    // Add physics properties to rocket pack
-    rocketPack.setBounce(0.2);
-    rocketPack.setCollideWorldBounds(true);
-    // Add collision between rocket pack and platforms
-    this.physics.add.collider(rocketPack, platforms);
+    rocketPack.setScale(0.05);
+    rocketPack.setBounce(0.05);
+    rocketPack.setCollideWorldBounds(false);
+    
+    // Make rocketpack interactive
+    rocketPack.setInteractive({ useHandCursor: true });
+    
+    // Add hover effect
+    rocketPack.on('pointerover', function() {
+        this.setTint(0x00ffff);
+    });
+    rocketPack.on('pointerout', function() {
+        this.clearTint();
+    });
+    
+    // Add click handler
+    rocketPack.on('pointerdown', function() {
+        collectRocketPack(player, this);
+    });
+
+    // Modify the rocketpack collision handler
+    this.physics.add.collider(rocketPack, platforms, function(rocketPack, platform) {
+        if (rocketPack.body.velocity.y < 0) return;  // Don't lock it in place while bouncing up
+        
+        // Only lock it in place after it settles (low velocity)
+        if (Math.abs(rocketPack.body.velocity.y) < 10) {
+            rocketPack.setVelocity(0, 0);
+            rocketPack.body.allowGravity = false;
+            rocketPack.setCollideWorldBounds(true);
+            
+            // If it's the moving platform, store the platform reference
+            if (platform.isMoving) {
+                rocketPack.movingPlatform = platform;
+                rocketPack.relativeX = rocketPack.x - platform.x;
+            }
+        }
+    });
+
+    // Rocket pack collection function
+    function collectRocketPack(player, rocket) {
+        if (!hasRocketPack) {  // Only collect once
+            hasRocketPack = true;
+            jumpVelocity = -350;
+            rocket.destroy();
+            player.setTint(0xffff00);  // Turn player golden immediately
+            instructionText.setText('Rocket pack acquired! Use arrow keys to move, UP to jump higher, and SPACE to enter research zones');
+        }
+    }
+
+    // Add collision detection for rocket pack
+    this.physics.add.overlap(player, rocketPack, collectRocketPack);
 
     // Player animations with correct frame counts
     this.anims.create({
@@ -323,12 +401,23 @@ function create() {
         }
     });
 
-    // Add collision detection
+    // Add collision detection with platforms
     this.physics.add.collider(player, platforms, (player, platform) => {
-        // Check if player is standing on platform (not hitting from side)
-        if (player.body.touching.down && cursors.space.isDown && platform.zoneName) {
-            localStorage.setItem('lastPlatform', platform.zoneName);
-            window.location.href = platform.page;
+        if (player.body.touching.down) {
+            if (platform.isMoving) {
+                // Calculate relative position on platform
+                const relativeX = player.x - platform.x;
+                
+                // Apply platform movement
+                const platformDeltaX = platform.x - platform.prevX || 0;
+                player.x += platformDeltaX;
+            }
+            
+            // Check for zone entry
+            if (cursors.space.isDown && platform.zoneName) {
+                localStorage.setItem('lastPlatform', platform.zoneName);
+                window.location.href = platform.page;
+            }
         }
     });
 
@@ -344,20 +433,6 @@ function create() {
         }
     );
     instructionText.setScrollFactor(0);
-
-    // Rocket pack collection function
-    function collectRocketPack(player, rocket) {
-        if (!hasRocketPack) {  // Only collect once
-            hasRocketPack = true;
-            jumpVelocity = -350;
-            rocket.destroy();
-            player.setTint(0xffff00);  // Turn player golden immediately
-            instructionText.setText('Rocket pack acquired! Use arrow keys to move, UP to jump higher, and SPACE to enter research zones');
-        }
-    }
-
-    // Add collision detection for rocket pack
-    this.physics.add.overlap(player, rocketPack, collectRocketPack);
 
     // Camera follow player
     this.cameras.main.startFollow(player, true, 0.08, 0.08);
@@ -398,4 +473,15 @@ function update() {
     if (player.y > this.scale.height * 2) {  // Let them fall twice the screen height
         window.location.href = "death.html";
     }
+
+    // Update platform previous positions and move rocketpack
+    platforms.children.iterate(function (platform) {
+        if (platform && platform.isMoving) {
+            if (rocketPack && rocketPack.movingPlatform === platform) {
+                const platformDeltaX = platform.x - platform.prevX;
+                rocketPack.x += platformDeltaX;
+            }
+            platform.prevX = platform.x;
+        }
+    });
 }
