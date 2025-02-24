@@ -204,7 +204,7 @@ function create() {
         { x: x_offset + 900, y: groundY - 200, name: 'Groundwater\nsubsidence', page: 'groundwater/groundwater.html' },
         { x: x_offset + 1300, y: groundY - 300, name: 'Tectonics', page: 'tectonics/tectonics.html' },
         { 
-            x: 100 - jumpDistance,  // Position it to the left of first platform
+            x: 0 - jumpDistance,  // Position it to the left of first platform
             y: groundY + 200,  // Position it between ground and first platform
             name: 'Original\nwebsite',
             page: 'original_site/index.html'
