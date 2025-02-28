@@ -31,10 +31,12 @@ let jumpVelocity = -200;  // Initial lower jump height
 let hasRocketPack = false;
 let rocketPack;
 let instructionText;  // Make instruction text globally accessible
-let snake; // Snake enemy
+let snake; // Snake enemy (UFO)
 let snakeDirection = 1; // Initial direction
-let snakeSpeed = 100; // Snake speed
+let snakeSpeed = 70; // Reduced from 100 to 70 for slower movement
 let gameOver = false; // Track game state
+let attackMode = true; // Track if UFO is attacking or patrolling
+let patrolPoint = null; // Target point for patrolling
 
 function preload() {
     // Load bio text
@@ -78,7 +80,7 @@ function preload() {
     this.load.image('tectonics', 'tectonics/tectonics.webp');
     
     // Load snake sprite
-    this.load.image('snake', 'snake.png');
+    this.load.image('snake', 'ufo.png');
 }
 
 function create() {
@@ -516,7 +518,7 @@ function create() {
     // Add instruction about the snake
     if (instructionText) {
         const existingText = instructionText.text;
-        instructionText.setText(existingText + '. Watch out for the hat!');
+        instructionText.setText(existingText + '. Watch out for the UFO!');
     }
 }
 
@@ -554,27 +556,70 @@ function createSnake(scene) {
     // Make snake collide with platforms
     scene.physics.add.collider(snake, platforms);
     
-    // Initialize snake movement
-    updateSnakeMovement(scene);
+    // Initialize behavior switching timer
+    startBehaviorSwitchTimer(scene);
+}
+
+function startBehaviorSwitchTimer(scene) {
+    scene.time.delayedCall(
+        Phaser.Math.Between(4000, 8000), // Switch every 4-8 seconds
+        () => {
+            // Switch behavior mode
+            attackMode = !attackMode;
+            
+            if (!attackMode) {
+                // Generate a new random patrol point
+                patrolPoint = {
+                    x: Phaser.Math.Between(100, scene.scale.width - 100),
+                    y: Phaser.Math.Between(100, scene.scale.height - 100)
+                };
+            }
+            
+            // Schedule next switch
+            if (!gameOver) {
+                startBehaviorSwitchTimer(scene);
+            }
+        }
+    );
 }
 
 function updateSnakeMovement(scene) {
-    // If the game is over, stop snake movement
+    // If the game is over, stop UFO movement
     if (gameOver) {
         snake.setVelocity(0, 0);
         return;
     }
     
-    // Calculate direction to player
-    const dx = player.x - snake.x;
-    const dy = player.y - snake.y;
+    let targetX, targetY;
+    
+    if (attackMode) {
+        // Attack mode: target the player
+        targetX = player.x;
+        targetY = player.y;
+    } else {
+        // Patrol mode: move to random point
+        if (!patrolPoint || (Math.abs(snake.x - patrolPoint.x) < 50 && Math.abs(snake.y - patrolPoint.y) < 50)) {
+            // If reached patrol point or no patrol point, set a new one
+            patrolPoint = {
+                x: Phaser.Math.Between(100, scene.scale.width - 100),
+                y: Phaser.Math.Between(100, scene.scale.height - 100)
+            };
+        }
+        targetX = patrolPoint.x;
+        targetY = patrolPoint.y;
+    }
+    
+    // Calculate direction to target
+    const dx = targetX - snake.x;
+    const dy = targetY - snake.y;
     const angle = Math.atan2(dy, dx);
     
-    // Set snake velocity based on angle to player
-    snake.setVelocityX(Math.cos(angle) * snakeSpeed);
-    snake.setVelocityY(Math.sin(angle) * snakeSpeed);
+    // Set UFO velocity based on angle to target
+    const speed = attackMode ? snakeSpeed : snakeSpeed * 0.7; // Move slower in patrol mode
+    snake.setVelocityX(Math.cos(angle) * speed);
+    snake.setVelocityY(Math.sin(angle) * speed);
     
-    // Optional: flip snake sprite based on direction
+    // Optional: flip UFO sprite based on direction
     if (dx < 0) {
         snake.setFlipX(true);
     } else {
