@@ -31,6 +31,10 @@ let jumpVelocity = -200;  // Initial lower jump height
 let hasRocketPack = false;
 let rocketPack;
 let instructionText;  // Make instruction text globally accessible
+let snake; // Snake enemy
+let snakeDirection = 1; // Initial direction
+let snakeSpeed = 100; // Snake speed
+let gameOver = false; // Track game state
 
 function preload() {
     // Load bio text
@@ -72,6 +76,9 @@ function preload() {
     this.load.image('groundwater', 'groundwater/groundwater.webp');
     // Load tectonics image
     this.load.image('tectonics', 'tectonics/tectonics.webp');
+    
+    // Load snake sprite
+    this.load.image('snake', 'snake.png');
 }
 
 function create() {
@@ -499,9 +506,107 @@ function create() {
             action: { isPressed: false }
         };
     }
+
+    // After creating player and platforms, add the snake
+    createSnake(this);
+    
+    // Add collision between snake and player
+    this.physics.add.overlap(player, snake, playerHitBySnake, null, this);
+    
+    // Add instruction about the snake
+    if (instructionText) {
+        const existingText = instructionText.text;
+        instructionText.setText(existingText + '. Watch out for the snake!');
+    }
+}
+
+function createSnake(scene) {
+    // Create a graphics object instead of using an image
+    snake = scene.add.graphics();
+    
+    // Draw a triangle for the snake head (pointing right)
+    snake.fillStyle(0x00ff00, 1); // Green fill
+    snake.fillTriangle(0, -8, 16, 0, 0, 8);
+    
+    // Add eyes
+    snake.fillStyle(0xff0000, 1); // Red eyes
+    snake.fillCircle(4, -3, 2);
+    
+    // Convert to sprite
+    const texture = snake.generateTexture('snake', 20, 16);
+    snake.destroy();
+    
+    // Now create the actual snake sprite
+    const x = Phaser.Math.Between(100, scene.scale.width - 100);
+    const y = Phaser.Math.Between(100, scene.scale.height - 100);
+    
+    snake = scene.physics.add.sprite(x, y, 'snake');
+    snake.setCollideWorldBounds(false);
+    snake.setBounce(0.2);
+    snake.setScale(0.1); // Set to 5% of original size
+    
+    // Make snake unaffected by gravity
+    snake.body.setAllowGravity(false);
+    
+    // Set custom body size for better collision detection
+    snake.body.setSize(snake.width * 0.8, snake.height * 0.8);
+    
+    // Make snake collide with platforms
+    scene.physics.add.collider(snake, platforms);
+    
+    // Initialize snake movement
+    updateSnakeMovement(scene);
+}
+
+function updateSnakeMovement(scene) {
+    // If the game is over, stop snake movement
+    if (gameOver) {
+        snake.setVelocity(0, 0);
+        return;
+    }
+    
+    // Calculate direction to player
+    const dx = player.x - snake.x;
+    const dy = player.y - snake.y;
+    const angle = Math.atan2(dy, dx);
+    
+    // Set snake velocity based on angle to player
+    snake.setVelocityX(Math.cos(angle) * snakeSpeed);
+    snake.setVelocityY(Math.sin(angle) * snakeSpeed);
+    
+    // Optional: flip snake sprite based on direction
+    if (dx < 0) {
+        snake.setFlipX(true);
+    } else {
+        snake.setFlipX(false);
+    }
+}
+
+function playerHitBySnake(player, snake) {
+    if (gameOver) return;
+    
+    gameOver = true;
+    
+    // Stop player movement
+    player.setVelocity(0, 0);
+    player.setTint(0xff0000); // Turn player red
+    
+    // Stop snake movement
+    snake.setVelocity(0, 0);
+    
+    // Delay before going to death screen
+    this.time.delayedCall(1000, () => {
+        // Clear localStorage when player dies
+        localStorage.clear();
+        // Then redirect to death page
+        window.location.href = "death.html";
+    });
 }
 
 function update() {
+    // At beginning of update function, check if game is over
+    if (gameOver) return;
+    
     // Use same debug flag
     const forceMobile = false;
     const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -542,14 +647,6 @@ function update() {
             });
         }
 
-        // Death check
-        if (player.y > this.scale.height * 2) {
-            // Clear all localStorage when player dies
-            localStorage.clear();
-            // Then redirect to death page
-            window.location.href = "death.html";
-        }
-
         // Platform and rocketpack movement
         platforms.children.iterate(function (platform) {
             if (platform && platform.isMoving) {
@@ -560,5 +657,18 @@ function update() {
                 platform.prevX = platform.x;
             }
         });
+    }
+
+    // Update snake movement
+    if (snake && player) {
+        updateSnakeMovement(this);
+    }
+
+    // Existing death check is still valid:
+    if (player.y > this.scale.height * 2) {
+        // Clear all localStorage when player dies
+        localStorage.clear();
+        // Then redirect to death page
+        window.location.href = "death.html";
     }
 }
