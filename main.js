@@ -516,7 +516,7 @@ function create() {
     // Add instruction about the snake
     if (instructionText) {
         const existingText = instructionText.text;
-        instructionText.setText(existingText + '. Watch out for the snake!');
+        instructionText.setText(existingText + '. Watch out for the hat!');
     }
 }
 
@@ -543,7 +543,7 @@ function createSnake(scene) {
     snake = scene.physics.add.sprite(x, y, 'snake');
     snake.setCollideWorldBounds(false);
     snake.setBounce(0.2);
-    snake.setScale(0.1); // Set to 5% of original size
+    snake.setScale(0.06); // Set to 5% of original size
     
     // Make snake unaffected by gravity
     snake.body.setAllowGravity(false);
