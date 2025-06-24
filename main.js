@@ -497,6 +497,39 @@ function create() {
     copyrightText.setScrollFactor(0);  // Fix to screen
     copyrightText.setDepth(10);        // Make sure it's above other elements
 
+    // Add safe area detection function
+    this.getSafeAreaBottom = function() {
+        // Try to get CSS safe area inset
+        if (typeof CSS !== 'undefined' && CSS.supports && CSS.supports('padding-bottom', 'env(safe-area-inset-bottom)')) {
+            // Create a temporary element to measure safe area
+            const testEl = document.createElement('div');
+            testEl.style.position = 'fixed';
+            testEl.style.bottom = '0';
+            testEl.style.left = '0';
+            testEl.style.width = '1px';
+            testEl.style.height = '1px';
+            testEl.style.paddingBottom = 'env(safe-area-inset-bottom)';
+            testEl.style.visibility = 'hidden';
+            document.body.appendChild(testEl);
+            
+            const safeArea = parseInt(getComputedStyle(testEl).paddingBottom) || 0;
+            document.body.removeChild(testEl);
+            return safeArea;
+        }
+        
+        // Fallback: device-specific estimates
+        const userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.includes('iphone')) {
+            // iPhone with home indicator (X and newer)
+            if (window.screen.height >= 812) return 34;
+            return 20; // Older iPhones
+        } else if (userAgent.includes('android')) {
+            return 24; // Android navigation bar estimate
+        }
+        
+        return 20; // Default fallback
+    };
+
     if (isMobile) {
         // Mobile controls setup
         this.mobileControls = {
@@ -506,18 +539,31 @@ function create() {
             action: { isPressed: false }
         };
 
-        // Create mobile control buttons
-        const buttonSize = 80;
-        const buttonY = this.scale.height - 100;
-        const buttonSpacing = 100;
+        // Create mobile control buttons with responsive positioning
+        const screenWidth = this.scale.width;
+        const screenHeight = this.scale.height;
+        
+        // Responsive button sizing based on screen size
+        const buttonSize = Math.min(screenWidth * 0.12, 90); // 12% of width, max 90px
+        
+        // Safe area calculation for different devices
+        const safeAreaBottom = this.getSafeAreaBottom();
+        const baseBottomMargin = Math.max(screenHeight * 0.15, 120); // 15% of height, min 120px
+        const buttonY = screenHeight - baseBottomMargin - safeAreaBottom;
+        
+        // Responsive spacing
+        const buttonSpacing = Math.min(screenWidth * 0.15, 120);
 
+        // Responsive icon sizing
+        const iconScale = buttonSize / 80; // Scale icons relative to button size
+        
         // Left button
         const leftButton = this.add.graphics();
         leftButton.fillStyle(0x333333, 0.7);
-        leftButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        leftButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, buttonSize * 0.125);
         leftButton.fillStyle(0xffffff, 1);
-        leftButton.fillTriangle(-20, 0, 5, -15, 5, 15);
-        leftButton.x = buttonSpacing;
+        leftButton.fillTriangle(-20 * iconScale, 0, 5 * iconScale, -15 * iconScale, 5 * iconScale, 15 * iconScale);
+        leftButton.x = Math.max(buttonSpacing, buttonSize);
         leftButton.y = buttonY;
         leftButton.setScrollFactor(0);
         leftButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
@@ -525,10 +571,10 @@ function create() {
         // Right button
         const rightButton = this.add.graphics();
         rightButton.fillStyle(0x333333, 0.7);
-        rightButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        rightButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, buttonSize * 0.125);
         rightButton.fillStyle(0xffffff, 1);
-        rightButton.fillTriangle(20, 0, -5, -15, -5, 15);
-        rightButton.x = buttonSpacing * 2;
+        rightButton.fillTriangle(20 * iconScale, 0, -5 * iconScale, -15 * iconScale, -5 * iconScale, 15 * iconScale);
+        rightButton.x = Math.max(buttonSpacing * 2, buttonSize * 2.5);
         rightButton.y = buttonY;
         rightButton.setScrollFactor(0);
         rightButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
@@ -536,10 +582,10 @@ function create() {
         // Jump button
         const jumpButton = this.add.graphics();
         jumpButton.fillStyle(0x333333, 0.7);
-        jumpButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        jumpButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, buttonSize * 0.125);
         jumpButton.fillStyle(0xffffff, 1);
-        jumpButton.fillTriangle(0, -20, -15, 5, 15, 5);
-        jumpButton.x = this.scale.width - buttonSpacing * 2;
+        jumpButton.fillTriangle(0, -20 * iconScale, -15 * iconScale, 5 * iconScale, 15 * iconScale, 5 * iconScale);
+        jumpButton.x = Math.min(screenWidth - buttonSpacing * 2, screenWidth - buttonSize * 2.5);
         jumpButton.y = buttonY;
         jumpButton.setScrollFactor(0);
         jumpButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
@@ -547,10 +593,10 @@ function create() {
         // Action button (for entering zones)
         const actionButton = this.add.graphics();
         actionButton.fillStyle(0x333333, 0.7);
-        actionButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        actionButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, buttonSize * 0.125);
         actionButton.fillStyle(0xffffff, 1);
-        actionButton.fillCircle(0, 0, 15);
-        actionButton.x = this.scale.width - buttonSpacing;
+        actionButton.fillCircle(0, 0, 15 * iconScale);
+        actionButton.x = Math.min(screenWidth - buttonSpacing, screenWidth - buttonSize);
         actionButton.y = buttonY;
         actionButton.setScrollFactor(0);
         actionButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);

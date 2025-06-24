@@ -12,6 +12,7 @@
         </script>
     <title>Research Map</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -23,10 +24,16 @@
             align-items: center;
             min-height: 100vh;
             background: #000;
+            /* Support for safe areas */
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
         #game {
             width: 100vw;
             height: 100vh;
+            /* Ensure game respects safe areas */
+            max-height: calc(100vh - env(safe-area-inset-bottom));
         }
     </style>
 </head>
