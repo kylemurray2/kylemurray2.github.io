@@ -498,7 +498,97 @@ function create() {
     copyrightText.setDepth(10);        // Make sure it's above other elements
 
     if (isMobile) {
-        // Mobile controls setup - no changes needed
+        // Mobile controls setup
+        this.mobileControls = {
+            left: { isPressed: false },
+            right: { isPressed: false },
+            jump: { isPressed: false },
+            action: { isPressed: false }
+        };
+
+        // Create mobile control buttons
+        const buttonSize = 80;
+        const buttonY = this.scale.height - 100;
+        const buttonSpacing = 100;
+
+        // Left button
+        const leftButton = this.add.graphics();
+        leftButton.fillStyle(0x333333, 0.7);
+        leftButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        leftButton.fillStyle(0xffffff, 1);
+        leftButton.fillTriangle(-20, 0, 5, -15, 5, 15);
+        leftButton.x = buttonSpacing;
+        leftButton.y = buttonY;
+        leftButton.setScrollFactor(0);
+        leftButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
+
+        // Right button
+        const rightButton = this.add.graphics();
+        rightButton.fillStyle(0x333333, 0.7);
+        rightButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        rightButton.fillStyle(0xffffff, 1);
+        rightButton.fillTriangle(20, 0, -5, -15, -5, 15);
+        rightButton.x = buttonSpacing * 2;
+        rightButton.y = buttonY;
+        rightButton.setScrollFactor(0);
+        rightButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
+
+        // Jump button
+        const jumpButton = this.add.graphics();
+        jumpButton.fillStyle(0x333333, 0.7);
+        jumpButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        jumpButton.fillStyle(0xffffff, 1);
+        jumpButton.fillTriangle(0, -20, -15, 5, 15, 5);
+        jumpButton.x = this.scale.width - buttonSpacing * 2;
+        jumpButton.y = buttonY;
+        jumpButton.setScrollFactor(0);
+        jumpButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
+
+        // Action button (for entering zones)
+        const actionButton = this.add.graphics();
+        actionButton.fillStyle(0x333333, 0.7);
+        actionButton.fillRoundedRect(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize, 10);
+        actionButton.fillStyle(0xffffff, 1);
+        actionButton.fillCircle(0, 0, 15);
+        actionButton.x = this.scale.width - buttonSpacing;
+        actionButton.y = buttonY;
+        actionButton.setScrollFactor(0);
+        actionButton.setInteractive(new Phaser.Geom.Rectangle(-buttonSize/2, -buttonSize/2, buttonSize, buttonSize), Phaser.Geom.Rectangle.Contains);
+
+        // Button event handlers
+        leftButton.on('pointerdown', () => { this.mobileControls.left.isPressed = true; });
+        leftButton.on('pointerup', () => { this.mobileControls.left.isPressed = false; });
+        leftButton.on('pointerout', () => { this.mobileControls.left.isPressed = false; });
+
+        rightButton.on('pointerdown', () => { this.mobileControls.right.isPressed = true; });
+        rightButton.on('pointerup', () => { this.mobileControls.right.isPressed = false; });
+        rightButton.on('pointerout', () => { this.mobileControls.right.isPressed = false; });
+
+        jumpButton.on('pointerdown', () => { this.mobileControls.jump.isPressed = true; });
+        jumpButton.on('pointerup', () => { this.mobileControls.jump.isPressed = false; });
+        jumpButton.on('pointerout', () => { this.mobileControls.jump.isPressed = false; });
+
+        actionButton.on('pointerdown', () => { this.mobileControls.action.isPressed = true; });
+        actionButton.on('pointerup', () => { this.mobileControls.action.isPressed = false; });
+        actionButton.on('pointerout', () => { this.mobileControls.action.isPressed = false; });
+
+        // Visual feedback for button presses
+        leftButton.on('pointerdown', () => { leftButton.setAlpha(0.5); });
+        leftButton.on('pointerup', () => { leftButton.setAlpha(1); });
+        leftButton.on('pointerout', () => { leftButton.setAlpha(1); });
+
+        rightButton.on('pointerdown', () => { rightButton.setAlpha(0.5); });
+        rightButton.on('pointerup', () => { rightButton.setAlpha(1); });
+        rightButton.on('pointerout', () => { rightButton.setAlpha(1); });
+
+        jumpButton.on('pointerdown', () => { jumpButton.setAlpha(0.5); });
+        jumpButton.on('pointerup', () => { jumpButton.setAlpha(1); });
+        jumpButton.on('pointerout', () => { jumpButton.setAlpha(1); });
+
+        actionButton.on('pointerdown', () => { actionButton.setAlpha(0.5); });
+        actionButton.on('pointerup', () => { actionButton.setAlpha(1); });
+        actionButton.on('pointerout', () => { actionButton.setAlpha(1); });
+
     } else {
         // Initialize empty mobile controls to prevent errors
         this.mobileControls = {
@@ -657,7 +747,49 @@ function update() {
     const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     if (isMobile) {
-        // Mobile controls logic - keep this part
+        // Mobile controls logic
+        if (this.mobileControls.left.isPressed) {
+            player.setVelocityX(-200);
+            player.anims.play('left', true);
+        } else if (this.mobileControls.right.isPressed) {
+            player.setVelocityX(200);
+            player.anims.play('right', true);
+        } else {
+            player.setVelocityX(0);
+            player.anims.play('turn');
+        }
+
+        // Jump
+        if (this.mobileControls.jump.isPressed && player.body.touching.down) {
+            player.setVelocityY(jumpVelocity);
+            if (hasRocketPack) {
+                player.setTint(0xffff00);
+            } else {
+                player.clearTint();
+            }
+        }
+
+        // Zone entry with action button
+        if (this.mobileControls.action.isPressed && player.body.touching.down) {
+            platforms.children.iterate((platform) => {
+                if (platform && platform.zoneName && 
+                    Phaser.Geom.Intersects.RectangleToRectangle(player.getBounds(), platform.getBounds())) {
+                    localStorage.setItem('lastPlatform', platform.zoneName);
+                    window.location.href = platform.page;
+                }
+            });
+        }
+
+        // Platform and rocketpack movement
+        platforms.children.iterate(function (platform) {
+            if (platform && platform.isMoving) {
+                if (rocketPack && rocketPack.movingPlatform === platform) {
+                    const platformDeltaX = platform.x - platform.prevX || 0;
+                    rocketPack.x += platformDeltaX;
+                }
+                platform.prevX = platform.x;
+            }
+        });
     } else {
         // Desktop controls - basic version
         if (cursors.left.isDown) {
