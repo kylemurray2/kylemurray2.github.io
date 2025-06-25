@@ -473,9 +473,22 @@ function create() {
     // Input handling
     cursors = this.input.keyboard.createCursorKeys();
 
-    // Camera follow player
-    this.cameras.main.startFollow(player, true, 0.08, 0.08);
-    this.cameras.main.setZoom(1);
+    // Camera follow player with different settings for mobile
+    if (isMobile) {
+        // Mobile camera settings - wider view and smoother follow
+        this.cameras.main.startFollow(player, true, 0.05, 0.05);  // Smoother follow
+        this.cameras.main.setZoom(0.6);  // Zoom out for better overview
+        
+        // Set camera deadzone for mobile (less aggressive following)
+        this.cameras.main.setDeadzone(120, 80);
+    } else {
+        // Desktop camera settings
+        this.cameras.main.startFollow(player, true, 0.08, 0.08);
+        this.cameras.main.setZoom(0.8);  // Slightly zoomed out even for desktop
+        
+        // Smaller deadzone for desktop
+        this.cameras.main.setDeadzone(60, 40);
+    }
 
     // Make platforms semi-transparent to match space theme
     platforms.children.iterate(function (platform) {
@@ -793,26 +806,41 @@ function update() {
     const isMobile = forceMobile || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     if (isMobile) {
-        // Mobile controls logic
+        // Mobile controls logic with improved responsiveness
+        const mobileSpeed = 180; // Slightly slower for better control
+        
         if (this.mobileControls.left.isPressed) {
-            player.setVelocityX(-200);
+            player.setVelocityX(-mobileSpeed);
             player.anims.play('left', true);
         } else if (this.mobileControls.right.isPressed) {
-            player.setVelocityX(200);
+            player.setVelocityX(mobileSpeed);
             player.anims.play('right', true);
         } else {
-            player.setVelocityX(0);
-            player.anims.play('turn');
+            // Smoother stopping with slight deceleration
+            const currentVelX = player.body.velocity.x;
+            if (Math.abs(currentVelX) > 10) {
+                player.setVelocityX(currentVelX * 0.8); // Gradual slowdown
+            } else {
+                player.setVelocityX(0);
+                player.anims.play('turn');
+            }
         }
 
-        // Jump
+        // Jump with mobile-friendly mechanics
         if (this.mobileControls.jump.isPressed && player.body.touching.down) {
-            player.setVelocityY(jumpVelocity);
+            // Slightly higher jump for mobile to compensate for touch controls
+            const mobileJumpVelocity = hasRocketPack ? jumpVelocity * 0.9 : jumpVelocity * 1.1;
+            player.setVelocityY(mobileJumpVelocity);
             if (hasRocketPack) {
                 player.setTint(0xffff00);
             } else {
                 player.clearTint();
             }
+            
+            // Prevent multiple jumps from single tap
+            this.time.delayedCall(200, () => {
+                // Small delay to prevent accidental double jumps
+            });
         }
 
         // Zone entry with action button
