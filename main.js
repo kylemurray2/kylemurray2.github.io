@@ -809,7 +809,12 @@ function update() {
         // Mobile controls logic with improved responsiveness
         const mobileSpeed = 180; // Slightly slower for better control
         
-        if (this.mobileControls.left.isPressed) {
+        // Handle horizontal movement (independent of jump)
+        if (this.mobileControls.left.isPressed && this.mobileControls.right.isPressed) {
+            // Both pressed - stop moving
+            player.setVelocityX(0);
+            player.anims.play('turn');
+        } else if (this.mobileControls.left.isPressed) {
             player.setVelocityX(-mobileSpeed);
             player.anims.play('left', true);
         } else if (this.mobileControls.right.isPressed) {
@@ -826,21 +831,25 @@ function update() {
             }
         }
 
-        // Jump with mobile-friendly mechanics
+        // Handle jump independently (allows running jumps)
         if (this.mobileControls.jump.isPressed && player.body.touching.down) {
-            // Slightly higher jump for mobile to compensate for touch controls
-            const mobileJumpVelocity = hasRocketPack ? jumpVelocity * 0.9 : jumpVelocity * 1.1;
-            player.setVelocityY(mobileJumpVelocity);
-            if (hasRocketPack) {
-                player.setTint(0xffff00);
-            } else {
-                player.clearTint();
+            // Prevent rapid-fire jumping
+            if (!this.jumpCooldown) {
+                // Slightly higher jump for mobile to compensate for touch controls
+                const mobileJumpVelocity = hasRocketPack ? jumpVelocity * 0.9 : jumpVelocity * 1.1;
+                player.setVelocityY(mobileJumpVelocity);
+                if (hasRocketPack) {
+                    player.setTint(0xffff00);
+                } else {
+                    player.clearTint();
+                }
+                
+                // Set jump cooldown
+                this.jumpCooldown = true;
+                this.time.delayedCall(100, () => {
+                    this.jumpCooldown = false;
+                });
             }
-            
-            // Prevent multiple jumps from single tap
-            this.time.delayedCall(200, () => {
-                // Small delay to prevent accidental double jumps
-            });
         }
 
         // Zone entry with action button
