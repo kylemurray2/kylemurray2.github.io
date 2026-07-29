@@ -6,10 +6,10 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-07-29T09:49:53",
-  "next_scan_at": "2026-07-29T09:46:47",
+  "last_scan": "2026-07-29T09:54:29",
+  "next_scan_at": "2026-07-29T09:51:25",
   "error": null,
-  "scan_count": 59,
+  "scan_count": 60,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
@@ -760,8 +760,8 @@
       "raw_date": "2026-07-29",
       "time": "3:20p",
       "time_24h": "15:20",
-      "standard_available": 23,
-      "booked_pct": 91.4,
+      "standard_available": 22,
+      "booked_pct": 91.7,
       "best_seat_id": "B32",
       "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
       "pairs_count": 5,
@@ -1837,5 +1837,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-07-29T09:49:53"
+  "published_at": "2026-07-29T09:54:29"
 }
