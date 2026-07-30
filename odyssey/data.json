@@ -6,16 +6,16 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-07-30T09:21:10",
-  "next_scan_at": "2026-07-30T09:17:48",
+  "last_scan": "2026-07-30T09:26:03",
+  "next_scan_at": "2026-07-30T09:22:41",
   "error": null,
-  "scan_count": 350,
+  "scan_count": 351,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
   "showtimes_found": 63,
   "showtimes_with_seats": 59,
-  "total_available_ranked": 3469,
+  "total_available_ranked": 3467,
   "great_seat_count": 0,
   "top_seats": [
     {
@@ -955,11 +955,11 @@
       "raw_date": "2026-08-04",
       "time": "3:00p",
       "time_24h": "15:00",
-      "standard_available": 53,
-      "booked_pct": 81.7,
-      "best_seat_id": "B17",
+      "standard_available": 51,
+      "booked_pct": 82.3,
+      "best_seat_id": "C31",
       "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
-      "pairs_count": 8,
+      "pairs_count": 7,
       "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=552510171&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-08-04+15%3A00&route=map-seat-map",
       "showtime_id": 552510171,
       "best_tier_clean": "Extreme Front / Far Side",
@@ -1762,5 +1762,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-07-30T09:21:10"
+  "published_at": "2026-07-30T09:26:03"
 }
