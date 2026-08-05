@@ -6,16 +6,16 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-08-05T14:12:11",
-  "next_scan_at": "2026-08-05T14:09:09",
+  "last_scan": "2026-08-05T14:16:45",
+  "next_scan_at": "2026-08-05T14:13:43",
   "error": null,
-  "scan_count": 33,
+  "scan_count": 34,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
   "showtimes_found": 40,
-  "showtimes_with_seats": 30,
-  "total_available_ranked": 6248,
+  "showtimes_with_seats": 31,
+  "total_available_ranked": 6293,
   "great_seat_count": 978,
   "top_seats": [
     {
@@ -530,13 +530,31 @@
       "score": 117.0,
       "tier": "\ud83c\udf1f Prime Center",
       "type": "standard",
+      "date": "Wed 2026-09-09",
+      "raw_date": "2026-09-09",
+      "time": "7:00p",
+      "time_24h": "19:00",
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088860&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-09+19%3A00&route=map-seat-map",
+      "showtime_id": 558088860,
+      "rank": 29,
+      "tier_clean": "Prime Center",
+      "is_great": true
+    },
+    {
+      "id": "G24",
+      "row_letter": "G",
+      "row_num": 7,
+      "column": 15,
+      "score": 117.0,
+      "tier": "\ud83c\udf1f Prime Center",
+      "type": "standard",
       "date": "Tue 2026-09-08",
       "raw_date": "2026-09-08",
       "time": "7:00p",
       "time_24h": "19:00",
       "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088859&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-08+19%3A00&route=map-seat-map",
       "showtime_id": 558088859,
-      "rank": 29,
+      "rank": 30,
       "tier_clean": "Prime Center",
       "is_great": true
     },
@@ -554,24 +572,6 @@
       "time_24h": "19:00",
       "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088859&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-08+19%3A00&route=map-seat-map",
       "showtime_id": 558088859,
-      "rank": 30,
-      "tier_clean": "Prime Center",
-      "is_great": true
-    },
-    {
-      "id": "G24",
-      "row_letter": "G",
-      "row_num": 7,
-      "column": 15,
-      "score": 117.0,
-      "tier": "\ud83c\udf1f Prime Center",
-      "type": "standard",
-      "date": "Wed 2026-09-09",
-      "raw_date": "2026-09-09",
-      "time": "7:00p",
-      "time_24h": "19:00",
-      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088860&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-09+19%3A00&route=map-seat-map",
-      "showtime_id": 558088860,
       "rank": 31,
       "tier_clean": "Prime Center",
       "is_great": true
@@ -740,6 +740,21 @@
     }
   ],
   "showtimes": [
+    {
+      "date": "Thu 2026-08-13",
+      "raw_date": "2026-08-13",
+      "time": "7:00p",
+      "time_24h": "19:00",
+      "standard_available": 46,
+      "booked_pct": 83.7,
+      "best_seat_id": "B18",
+      "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
+      "pairs_count": 6,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=557132562&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-08-13+19%3A00&route=map-seat-map",
+      "showtime_id": 557132562,
+      "best_tier_clean": "Extreme Front / Far Side",
+      "is_great": false
+    },
     {
       "date": "Mon 2026-08-17",
       "raw_date": "2026-08-17",
@@ -1327,5 +1342,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-08-05T14:12:11"
+  "published_at": "2026-08-05T14:16:45"
 }
