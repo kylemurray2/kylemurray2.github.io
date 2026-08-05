@@ -6,17 +6,17 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-08-05T11:09:27",
-  "next_scan_at": "2026-08-05T11:01:35",
+  "last_scan": "2026-08-05T11:18:47",
+  "next_scan_at": "2026-08-05T11:10:59",
   "error": null,
-  "scan_count": 1255,
+  "scan_count": 1256,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
   "showtimes_found": 89,
-  "showtimes_with_seats": 59,
-  "total_available_ranked": 10357,
-  "great_seat_count": 1446,
+  "showtimes_with_seats": 61,
+  "total_available_ranked": 10380,
+  "great_seat_count": 1444,
   "top_seats": [
     {
       "id": "G17",
@@ -816,6 +816,36 @@
       "is_great": false
     },
     {
+      "date": "Thu 2026-08-06",
+      "raw_date": "2026-08-06",
+      "time": "6:40p",
+      "time_24h": "18:40",
+      "standard_available": 14,
+      "booked_pct": 93.4,
+      "best_seat_id": "A12",
+      "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
+      "pairs_count": 3,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=553186948&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-08-06+18%3A40&route=map-seat-map",
+      "showtime_id": 553186948,
+      "best_tier_clean": "Extreme Front / Far Side",
+      "is_great": false
+    },
+    {
+      "date": "Sun 2026-08-09",
+      "raw_date": "2026-08-09",
+      "time": "3:20p",
+      "time_24h": "15:20",
+      "standard_available": 17,
+      "booked_pct": 92.2,
+      "best_seat_id": "A21",
+      "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
+      "pairs_count": 7,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=553186919&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-08-09+15%3A20&route=map-seat-map",
+      "showtime_id": 553186919,
+      "best_tier_clean": "Extreme Front / Far Side",
+      "is_great": false
+    },
+    {
       "date": "Thu 2026-08-13",
       "raw_date": "2026-08-13",
       "time": "7:00p",
@@ -1330,8 +1360,8 @@
       "raw_date": "2026-08-28",
       "time": "3:00p",
       "time_24h": "15:00",
-      "standard_available": 253,
-      "booked_pct": 26.0,
+      "standard_available": 251,
+      "booked_pct": 26.6,
       "best_seat_id": "G26",
       "best_tier": "\u2728 Great View",
       "pairs_count": 23,
@@ -1762,5 +1792,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-08-05T11:09:27"
+  "published_at": "2026-08-05T11:18:47"
 }
