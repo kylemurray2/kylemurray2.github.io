@@ -6,16 +6,16 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-08-12T09:32:42",
-  "next_scan_at": "2026-08-12T09:30:36",
+  "last_scan": "2026-08-12T09:36:18",
+  "next_scan_at": "2026-08-12T09:34:13",
   "error": null,
-  "scan_count": 445,
+  "scan_count": 446,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
   "showtimes_found": 36,
-  "showtimes_with_seats": 31,
-  "total_available_ranked": 4741,
+  "showtimes_with_seats": 32,
+  "total_available_ranked": 4756,
   "great_seat_count": 288,
   "top_seats": [
     {
@@ -674,12 +674,12 @@
       "score": 214.5,
       "tier": "\u2728 Great View",
       "type": "standard",
-      "date": "Wed 2026-09-09",
-      "raw_date": "2026-09-09",
+      "date": "Thu 2026-09-10",
+      "raw_date": "2026-09-10",
       "time": "7:00p",
       "time_24h": "19:00",
-      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088860&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-09+19%3A00&route=map-seat-map",
-      "showtime_id": 558088860,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088865&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-10+19%3A00&route=map-seat-map",
+      "showtime_id": 558088865,
       "rank": 37,
       "tier_clean": "Great View",
       "is_great": true
@@ -692,12 +692,12 @@
       "score": 214.5,
       "tier": "\u2728 Great View",
       "type": "standard",
-      "date": "Thu 2026-09-10",
-      "raw_date": "2026-09-10",
+      "date": "Wed 2026-09-09",
+      "raw_date": "2026-09-09",
       "time": "7:00p",
       "time_24h": "19:00",
-      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088865&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-10+19%3A00&route=map-seat-map",
-      "showtime_id": 558088865,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=558088860&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-09-09+19%3A00&route=map-seat-map",
+      "showtime_id": 558088860,
       "rank": 38,
       "tier_clean": "Great View",
       "is_great": true
@@ -740,6 +740,21 @@
     }
   ],
   "showtimes": [
+    {
+      "date": "Thu 2026-08-13",
+      "raw_date": "2026-08-13",
+      "time": "7:00p",
+      "time_24h": "19:00",
+      "standard_available": 17,
+      "booked_pct": 92.0,
+      "best_seat_id": "A15",
+      "best_tier": "\ud83d\udd3b Extreme Front / Far Side",
+      "pairs_count": 5,
+      "url": "https://tickets.fandango.com/mobileexpress/seatselection?row_count=557132562&tid=AAFXW&a=11533&mid=241386&chainCode=REGL&sdate=2026-08-13+19%3A00&route=map-seat-map",
+      "showtime_id": 557132562,
+      "best_tier_clean": "Extreme Front / Far Side",
+      "is_great": false
+    },
     {
       "date": "Mon 2026-08-17",
       "raw_date": "2026-08-17",
@@ -895,8 +910,8 @@
       "raw_date": "2026-08-27",
       "time": "7:00p",
       "time_24h": "19:00",
-      "standard_available": 238,
-      "booked_pct": 30.2,
+      "standard_available": 236,
+      "booked_pct": 30.7,
       "best_seat_id": "G27",
       "best_tier": "\u2728 Great View",
       "pairs_count": 22,
@@ -1342,5 +1357,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-08-12T09:32:42"
+  "published_at": "2026-08-12T09:36:18"
 }
