@@ -6,10 +6,10 @@
     "total": 0,
     "message": ""
   },
-  "last_scan": "2026-08-12T09:25:30",
-  "next_scan_at": "2026-08-12T09:23:28",
+  "last_scan": "2026-08-12T09:29:05",
+  "next_scan_at": "2026-08-12T09:27:01",
   "error": null,
-  "scan_count": 443,
+  "scan_count": 444,
   "theater": "Regal UA Colorado Center",
   "movie": "The Odyssey",
   "format": "IMAX 70mm",
@@ -1357,5 +1357,5 @@
   ],
   "interval_sec": 90,
   "public": true,
-  "published_at": "2026-08-12T09:25:30"
+  "published_at": "2026-08-12T09:29:05"
 }
